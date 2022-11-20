@@ -19,7 +19,7 @@ class CreateTaprooms < ActiveRecord::Migration[5.2]
       t.boolean :patio
       t.boolean :group_accommodations  
       t.string :logo
-      t.string :photo
+      t.string :image_url
       t.string :instagram
       t.string :twitter
       t.string :facebook
