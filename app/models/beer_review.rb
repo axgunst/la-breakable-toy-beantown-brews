@@ -4,7 +4,7 @@ class BeerReview < ApplicationRecord
   validates :body, presence: true
   validates :overall_rating, presence: true
   
-
-  belongs_to :beer
   belongs_to :user
+  belongs_to :beer
+  
 end

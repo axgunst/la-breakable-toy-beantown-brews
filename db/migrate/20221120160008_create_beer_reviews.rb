@@ -4,12 +4,12 @@ class CreateBeerReviews < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.string :name, null: false
       t.string :overall_rating, null: false
-      t.boolean :container
+      t.string :pour
       t.string :body, null: false
       t.string :image_url
 
-      t.belongs_to :beer, null: false
       t.belongs_to :user, null: false
+      t.belongs_to :beer, null: false
       
       t.timestamps null: false
     end

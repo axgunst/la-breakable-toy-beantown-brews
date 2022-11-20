@@ -6,12 +6,11 @@ class CreateBeers < ActiveRecord::Migration[5.2]
       t.string :abv
       t.string :description
       t.string :brewer, null: false
-      t.string :iamge_url
+      t.string :image_url
 
-
-      t.belongs_to :taproom, null: false
       t.belongs_to :user, null: false
-
+      t.belongs_to :taproom, null: false
+      
       t.timestamps null: false
     end
   end

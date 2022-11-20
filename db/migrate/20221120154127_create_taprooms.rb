@@ -14,10 +14,9 @@ class CreateTaprooms < ActiveRecord::Migration[5.2]
       t.string :saturday_hours
       t.string :sunday_hours
       t.string :description
-      t.boolean :dog_policy
-      t.boolean :kitchen
-      t.boolean :patio
-      t.boolean :group_accommodations  
+      t.string :dogs
+      t.string :kitchen
+      t.string :patio
       t.string :logo
       t.string :image_url
       t.string :instagram

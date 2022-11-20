@@ -10,10 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_20_154127) do
+ActiveRecord::Schema.define(version: 2022_11_20_160008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "beer_reviews", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "name", null: false
+    t.string "overall_rating", null: false
+    t.string "pour"
+    t.string "body", null: false
+    t.string "image_url"
+    t.bigint "user_id", null: false
+    t.bigint "beer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["beer_id"], name: "index_beer_reviews_on_beer_id"
+    t.index ["user_id"], name: "index_beer_reviews_on_user_id"
+  end
+
+  create_table "beers", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "style", null: false
+    t.string "abv"
+    t.string "description"
+    t.string "brewer", null: false
+    t.string "image_url"
+    t.bigint "user_id", null: false
+    t.bigint "taproom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["taproom_id"], name: "index_beers_on_taproom_id"
+    t.index ["user_id"], name: "index_beers_on_user_id"
+  end
+
+  create_table "taproom_reviews", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "body", null: false
+    t.string "overall_rating"
+    t.string "service_rating"
+    t.string "ambience_rating"
+    t.string "group_accommodations_rating"
+    t.string "favorite_beer"
+    t.string "photo"
+    t.bigint "user_id", null: false
+    t.bigint "taproom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["taproom_id"], name: "index_taproom_reviews_on_taproom_id"
+    t.index ["user_id"], name: "index_taproom_reviews_on_user_id"
+  end
 
   create_table "taprooms", force: :cascade do |t|
     t.string "name", null: false
@@ -29,12 +76,11 @@ ActiveRecord::Schema.define(version: 2022_11_20_154127) do
     t.string "saturday_hours"
     t.string "sunday_hours"
     t.string "description"
-    t.boolean "dog_policy"
-    t.boolean "kitchen"
-    t.boolean "patio"
-    t.boolean "group_accommodations"
+    t.string "dogs"
+    t.string "kitchen"
+    t.string "patio"
     t.string "logo"
-    t.string "photo"
+    t.string "image_url"
     t.string "instagram"
     t.string "twitter"
     t.string "facebook"
@@ -48,6 +94,8 @@ ActiveRecord::Schema.define(version: 2022_11_20_154127) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "username", null: false
+    t.string "role", default: "member", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
