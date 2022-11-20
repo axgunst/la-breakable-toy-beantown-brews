@@ -4,12 +4,11 @@ import HomePage from './HomePage'
 
 export const App = (props) => {
   return (
-  <h1>Make It So React</h1>
-  <BrowserRouter>
+   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={HomePage}/>
     </Switch>
-  </BrowserRouter>
+   </BrowserRouter>
   )
 }
 
