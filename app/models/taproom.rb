@@ -4,4 +4,5 @@ class Taproom < ApplicationRecord
   validates :state, presence: true
   validates :zipcode, presence: true
 
+  has_many :taproom_reviews
 end 
