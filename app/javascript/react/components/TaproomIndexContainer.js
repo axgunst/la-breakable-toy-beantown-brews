@@ -1,7 +1,8 @@
 import React, {useState, useEffect } from "react";
+import TaproomTile from './TaproomTile'
 
 const TaproomIndexContainer = (props) => {
-  const [taproom, setTaproom] = useState([])
+  const [taprooms, setTaprooms] = useState([])
 
   const getTaprooms = async () => {
     try {
@@ -11,7 +12,7 @@ const TaproomIndexContainer = (props) => {
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
-      setRides(responseBody.rides)
+      setTaprooms(responseBody.taprooms)
       
     } catch (error) {
       console.error(`Error in Fetch: ${error.message}`)
@@ -19,7 +20,7 @@ const TaproomIndexContainer = (props) => {
   }
 
   useEffect(() => {
-    getRides()
+    getTaprooms()
   }, [])
 
   const taproomTiles = taprooms.map(taproom => {
@@ -52,12 +53,12 @@ const TaproomIndexContainer = (props) => {
       />
     )
   })
-
+  
   return (
     <div className='taproom-index'>
       <div className="grid-x">
         <div className= "small-12 medium-6 large-8 park-section">
-          <h1 className="taproom-title">Boston's Best Brews!</h1>
+          <h1 className="taproom-title">Boston's Taprooms!</h1>
         </div>
       </div>
         <div className='grid-x grid-margin-x'>
