@@ -3,7 +3,7 @@ import TaproomTile from './TaproomTile'
 
 const TaproomIndexContainer = (props) => {
   const [taprooms, setTaprooms] = useState([])
-
+  
   const getTaprooms = async () => {
     try {
       const response = await fetch("/api/v1/taprooms")
@@ -12,13 +12,12 @@ const TaproomIndexContainer = (props) => {
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
-      setTaprooms(responseBody.taprooms)
-      
+      setTaprooms(responseBody)
     } catch (error) {
       console.error(`Error in Fetch: ${error.message}`)
     }
   }
-
+  
   useEffect(() => {
     getTaprooms()
   }, [])
