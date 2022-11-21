@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "/taprooms", to: "static_pages#index"
+  get "./taprooms/:id", to: "static_pages#index"
 
   namespace :api do
     namespace :v1 do
