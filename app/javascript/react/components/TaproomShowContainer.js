@@ -20,7 +20,6 @@ const TaproomShowContainer = (props) => {
         throw error
       } 
       const responseBody = await response.json()
-      // debugger
 
       setTaproom(responseBody)
       setReviews(responseBody.reviews) 

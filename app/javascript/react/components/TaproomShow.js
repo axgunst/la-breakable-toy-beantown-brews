@@ -3,23 +3,23 @@ import TaproomReviewForm from "./TaproomReviewForm"
 
 const TaproomShow = (props) => {
 
-  // const taproomReviewTiles = props.reviews.map((taproomReview) => {
-  //   return (
-  //     <TaproomReviewTile 
-  //       key={taproomReview.id}
-  //       id={taproomReview.id}
-  //       title={taproomReview.title}
-  //       overall_rating={taproomReview.overall_rating}
-  //       service_rating={taproomReview.service_rating}
-  //       ambience_rating={taproomReview.ambience_rating}
-  //       group_accommodations_rating={taproomReview.group_accommodations_rating}
-  //       body={taproomReview.body}
-  //       favorite_beer={taproomReview.favorite_beer}
-  //       photo={taproomReview.photo}
-  //       username={taproomReview.username}
-  //     />
-  //   )
-  // })
+  const taproomReviewTiles = props.reviews.map((taproomReview) => {
+    return (
+      <TaproomReviewTile 
+        key={taproomReview.id}
+        id={taproomReview.id}
+        title={taproomReview.title}
+        overall_rating={taproomReview.overall_rating}
+        service_rating={taproomReview.service_rating}
+        ambience_rating={taproomReview.ambience_rating}
+        group_accommodations_rating={taproomReview.group_accommodations_rating}
+        body={taproomReview.body}
+        favorite_beer={taproomReview.favorite_beer}
+        photo={taproomReview.photo}
+        username={taproomReview.username}
+      />
+    )
+  })
   
   return (
     <div>
