@@ -25,7 +25,7 @@ const TaproomShowContainer = (props) => {
       setTaproom(responseBody)
       setReviews(responseBody.reviews) 
 
-      if (responseBody.taproom.current_user !== null) {
+      if (responseBody.current_user !== null) {
         setSignedIn(true)
       }
     } catch (err) {
