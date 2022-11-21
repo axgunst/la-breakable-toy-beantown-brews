@@ -1,5 +1,4 @@
 class Api::V1::TaproomsController < ApiController
-  before_action :authorize_admin, only: [:create]
   
   def index
     render json: Taproom.all

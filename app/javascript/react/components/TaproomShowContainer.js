@@ -1,6 +1,8 @@
 import React, {useState, useEffect } from "react";
+import TaproomShow from "./TaproomShow";
 
 const TaproomShowContainer = (props) => {
+
   const [taproom, setTaproom] = useState({})  
   const [reviews, setReviews] = useState([])
   const [signedIn, setSignedIn] = useState(false)
@@ -8,7 +10,6 @@ const TaproomShowContainer = (props) => {
   let reviewButton = 'hide'
 
   const taproomId = props.match.params.id
-
 
   const fetchTaproom = async () => {
     try {
@@ -19,9 +20,10 @@ const TaproomShowContainer = (props) => {
         throw error
       } 
       const responseBody = await response.json()
+      // debugger
 
-      setTaproom(responseBody.taproomId)
-      setReviews(responseBody.taproom.reviews) 
+      setTaproom(responseBody)
+      setReviews(responseBody.reviews) 
 
       if (responseBody.taproom.current_user !== null) {
         setSignedIn(true)
@@ -40,7 +42,7 @@ const TaproomShowContainer = (props) => {
   }, [])
 
   const addNewReview = async (payLoad) => {
-    let body = new formData();
+    let body = new FormData();
     body.append("title", payLoad.title);
     body.append("body", payLoad.body);
     body.append("overall_rating", payLoad.overall_rating);
@@ -51,7 +53,7 @@ const TaproomShowContainer = (props) => {
     body.append("photo", payLoad.photo);
 
     try {
-      const response = await fetch(`/api/v1/taprooms/${taproomId}/reviews`, {
+      const response = await fetch(`/api/v1/taprooms/${taproomId}/taproom_reviews`, {
         method: "POST",
         credentials: "same-origin",
         body: body,
@@ -69,8 +71,8 @@ const TaproomShowContainer = (props) => {
 
   return (
     <TaproomShow
-      key={taproom.id}
-      id={taproom.id}
+      key={taproomId}
+      id={taproomId}
       name={taproom.name}
       address={taproom.address}
       city={taproom.city}

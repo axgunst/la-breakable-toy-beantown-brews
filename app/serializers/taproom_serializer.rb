@@ -1,6 +1,5 @@
 class TaproomSerializer < ActiveModel::Serializer
-  attributes 
-  :id, 
+  attributes :id, 
   :name, 
   :address, 
   :city, 
@@ -22,7 +21,8 @@ class TaproomSerializer < ActiveModel::Serializer
   :instagram, 
   :twitter, 
   :facebook, 
-  :official_webpage
+  :official_webpage,
+  :current_user
   
   belongs_to :user
 end

@@ -1,6 +1,5 @@
 class TaproomShowSerializer < ActiveModel::Serializer
-  attributes 
-    :id, 
+  attributes :id,
     :name, 
     :address, 
     :city, 
@@ -28,6 +27,7 @@ class TaproomShowSerializer < ActiveModel::Serializer
   has_many :taproom_reviews
 
   def reviews
-    object.reviews.reverse()
+    # object.reviews.reverse()
+    object.reviews
   end
 end
