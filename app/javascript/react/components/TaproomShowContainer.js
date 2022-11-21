@@ -1,6 +1,5 @@
 import React, {useState, useEffect } from "react";
 
-
 const TaproomShowContainer = (props) => {
   const [taproom, setTaproom] = useState({})  
   const [reviews, setReviews] = useState([])
@@ -11,7 +10,7 @@ const TaproomShowContainer = (props) => {
   const taproomId = props.match.params.id
 
 
-  const fetchTaproom = async => {
+  const fetchTaproom = async () => {
     try {
       const response = await fetch(`/api/v1/taprooms/${taproomId}`)
       if (!response.ok) {
