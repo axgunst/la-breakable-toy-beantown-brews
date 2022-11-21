@@ -27,7 +27,6 @@ class TaproomShowSerializer < ActiveModel::Serializer
   has_many :taproom_reviews
 
   def reviews
-    # object.reviews.reverse()
     object.reviews
   end
 end

@@ -5,7 +5,10 @@ class Api::V1::TaproomsController < ApiController
   end
 
   def show   
-    render json: Taproom.find(params[:id]), serializer: TaproomShowSerializer, include: ['reviews.user']
+    binding.pry
+   taproom = Taproom.find(params[:id])
+   reviews = TaproomReview.where(taproom_id: params[:id])
+   render json: {taproom: taproom, reviews: reviews}
   end
 
   private

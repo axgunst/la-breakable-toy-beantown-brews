@@ -20,10 +20,8 @@ const TaproomShowContainer = (props) => {
         throw error
       } 
       const responseBody = await response.json()
-      // debugger
-
       setTaproom(responseBody)
-      setReviews(responseBody.reviews) 
+      setReviews([responseBody.reviews]) 
 
       if (responseBody.current_user !== null) {
         setSignedIn(true)
@@ -63,12 +61,11 @@ const TaproomShowContainer = (props) => {
         throw newError;
       }
       const responseBody = await response.json();
-      setReviews([...reviews, responseBody.review]);
+      setReviews([...reviews, responseBody]);
     } catch (err) {
       console.error(`Error in Fetch: ${err.message}`);
     }
   };
-
   return (
     <TaproomShow
       key={taproomId}

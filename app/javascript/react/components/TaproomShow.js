@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import TaproomReviewForm from "./TaproomReviewForm"
+import TaproomReviewTile from "./TaproomReviewTile"
 
 const TaproomShow = (props) => {
-
-  // const taproomReviewTiles = props.reviews.map((taproomReview) => {
-  //   return (
-  //     <TaproomReviewTile 
-  //       key={taproomReview.id}
-  //       id={taproomReview.id}
-  //       title={taproomReview.title}
-  //       overall_rating={taproomReview.overall_rating}
-  //       service_rating={taproomReview.service_rating}
-  //       ambience_rating={taproomReview.ambience_rating}
-  //       group_accommodations_rating={taproomReview.group_accommodations_rating}
-  //       body={taproomReview.body}
-  //       favorite_beer={taproomReview.favorite_beer}
-  //       photo={taproomReview.photo}
-  //       username={taproomReview.username}
-  //     />
-  //   )
-  // })
+  debugger
   
+  const taproomReviewTiles = props.reviews.map((taproomReview => {
+    return (
+      <TaproomReviewTile 
+        key={taproomReview.id}
+        id={taproomReview.id}
+        title={taproomReview.title}
+        overall_rating={taproomReview.overall_rating}
+        service_rating={taproomReview.service_rating}
+        ambience_rating={taproomReview.ambience_rating}
+        group_accommodations_rating={taproomReview.group_accommodations_rating}
+        body={taproomReview.body}
+        favorite_beer={taproomReview.favorite_beer}
+        photo={taproomReview.photo}
+        username={taproomReview.username}
+      />
+    )
+  }))
   return (
     <div>
       <h1>{props.name}</h1>
@@ -58,11 +59,11 @@ const TaproomShow = (props) => {
         <h4>Instagram: {props.instagram}</h4>
         <h4>Instagram: {props.instagram}</h4>
       </div>
-
+      {taproomReviewTiles}
     </div>
-  // {taproomReviewTiles}
+  
   )
-  debugger
+
 }
 
 export default TaproomShow

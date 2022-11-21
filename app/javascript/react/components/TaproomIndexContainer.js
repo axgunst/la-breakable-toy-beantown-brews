@@ -55,12 +55,12 @@ const TaproomIndexContainer = (props) => {
   
   return (
     <div className='taproom-index'>
-      <div className="grid-x">
-        <div className= "small-12 medium-6 large-8 park-section">
+      <div>
+        <div >
           <h1 className="taproom-title">Boston's Taprooms!</h1>
         </div>
       </div>
-        <div className='grid-x grid-margin-x'>
+        <div>
         {taproomTiles}
         </div>
     </div>
