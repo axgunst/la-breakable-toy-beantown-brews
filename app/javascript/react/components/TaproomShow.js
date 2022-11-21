@@ -3,7 +3,7 @@ import TaproomReviewForm from "./TaproomReviewForm"
 import TaproomReviewTile from "./TaproomReviewTile"
 
 const TaproomShow = (props) => {
-  debugger
+  // debugger
   
   const taproomReviewTiles = props.reviews.map((taproomReview => {
     return (
@@ -46,12 +46,12 @@ const TaproomShow = (props) => {
       <div className="taproom-faq">
         <h3>FAQ</h3>
         <h4>Are dogs allowed at our taproom? {props.dogs}</h4>
-        <h4>Do we have food avaialable? {props.kitchen}</h4>
+        <h4>Do we have food available? {props.kitchen}</h4>
         <h4>Do we have outdoor seating? {props.patio}</h4>
       </div>
 
       <div>
-        <h2>{props.description}</h2>
+        <h3>{props.description}</h3>
       </div>
       
       <div className="taproom-social-media">
@@ -67,3 +67,4 @@ const TaproomShow = (props) => {
 }
 
 export default TaproomShow
+

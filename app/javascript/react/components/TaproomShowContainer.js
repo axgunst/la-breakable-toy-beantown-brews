@@ -20,8 +20,9 @@ const TaproomShowContainer = (props) => {
         throw error
       } 
       const responseBody = await response.json()
-      setTaproom(responseBody)
-      setReviews([responseBody.reviews]) 
+
+      setTaproom(responseBody.taproom)
+      setReviews(responseBody.reviews) 
 
       if (responseBody.current_user !== null) {
         setSignedIn(true)
