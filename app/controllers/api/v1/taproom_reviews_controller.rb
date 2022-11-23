@@ -18,6 +18,6 @@ class Api::V1::TaproomsController < ApiController
   private
 
   def review_params
-    params.permit(:title, :body, :overall_rating, :service_rating, :ambience_rating, :group_accomodations_rating, :favorite_beer,:photo)
+    params.permit(:title, :body, :overall_rating, :service_rating, :ambience_rating, :group_accommodations_rating, :favorite_beer,:photo)
   end 
 end
