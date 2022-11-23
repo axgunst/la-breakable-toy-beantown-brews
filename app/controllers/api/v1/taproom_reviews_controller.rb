@@ -7,13 +7,25 @@ class Api::V1::TaproomsController < ApiController
     review.taproom = taproom
 
     review.user = current_user
+    if review.save
+      render json: review
+    else
+      render json: {errors: review.errors.full_messages.to_sentence}
+    end
   end 
 
   def update
   end 
 
   def destroy
-  end 
+    review = TaproomReview.find(params["id"])
+    if(verify_access(review))
+      review.destroy
+      render json: TaproomReview.all
+    else
+      render status: 401
+    end
+  end
 
   private
 
