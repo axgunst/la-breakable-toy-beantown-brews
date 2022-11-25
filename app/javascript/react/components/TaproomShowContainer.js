@@ -55,7 +55,7 @@ const TaproomShowContainer = (props) => {
       const response = await fetch(`/api/v1/taprooms/${taproomId}/taproom_reviews`, {
         method: "POST",
         credentials: "same-origin",
-        body: body,
+        body: "body",
       });
       if (!response.ok) {
         const newError = new Error(`${response.status} ${response.statusText}`);
@@ -67,6 +67,28 @@ const TaproomShowContainer = (props) => {
       console.error(`Error in Fetch: ${err.message}`);
     }
   };
+
+  const deleteReview = async () => {
+    try {
+      const response = await fetch(`/api/v1/taprooms/taproom_reviews/${props.match.params.id}`, {
+        method: "DELETE",
+        credentials: "same-origin",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }, 
+        body: JSON.stringify()
+      })
+      if (!response.ok) {
+        const errorMessage = `${response.status} ${response.statusText}`
+        const error = new Error(`Error! ${errorMessage}`)
+        throw (error)
+      } window.location.reload()
+    } catch(err) {
+      console.error(`Error in fetch: ${err.message}`)
+    }
+  }
+
   return (
     <TaproomShow
       key={taproomId}
@@ -97,6 +119,7 @@ const TaproomShowContainer = (props) => {
       setReviews={setReviews}
       addNewReview={addNewReview}
       reviewButton = {reviewButton}
+      deleteReview = {deleteReview}
     />
   )
 }
