@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :taprooms, only: [:index, :show, :create] do
-        resources :taproom_reviews, only: [:create, :update, :destroy]
+        resources :taproom_reviews, only: [:create, :update]
       end
+      resources :taproom_reviews, only: [:destroy]
     end
   end
 end

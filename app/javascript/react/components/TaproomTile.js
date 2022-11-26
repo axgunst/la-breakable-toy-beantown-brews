@@ -7,8 +7,6 @@ const TaproomTile = props => {
       <Link to={`/taprooms/${props.id}`}>
       <div className="taproom-logo-image-box">
         <img src={props.logo} className="taproom-logo-image-tile-show-city-on-hover"/>
-        <p className="taproom-name">{props.name}</p>
-        <p className="taproom-city-and-state">{`${props.city}, ${props.state}`}</p>
       </div>
       </Link>
     </div>
