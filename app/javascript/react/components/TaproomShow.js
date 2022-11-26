@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import TaproomReviewForm from "./TaproomReviewForm"
 import TaproomReviewTile from "./TaproomReviewTile"
 
-const TaproomShow = (props) => {
-  // debugger
-  
+const TaproomShow = (props) => {  
   const taproomReviewTiles = props.reviews.map((taproomReview => {
     return (
       <TaproomReviewTile 
@@ -24,23 +22,30 @@ const TaproomShow = (props) => {
   }))
   return (
     <div>
-      <h1>{props.name}</h1>
+      <h1 className="taproom-show-name">{props.name}</h1>
+      {/* <img src={props.logo}/> */}
       <img src={props.image_url}/>
-      <img src={props.logo}/>
+
       <div className="taproom-location">
         <h4>{props.address}</h4>
         <h4>{props.city}, {props.state}</h4>
         <h4>{props.zipcode}</h4>
       </div>
 
+      <div className="social-buttons">
+        <a href={props.instagram}><img src="http://assets.stickpng.com/thumbs/627ba7278d659819b11084f4.png"/></a> 
+        <a href={props.twitter}><img className="twitter-logo"src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png"/></a> 
+        <a href={props.facebook}><img src="https://i.pinimg.com/236x/57/ed/a8/57eda873709dddebaa12ebe3e6a65380.jpg"/></a> 
+      </div>
+
       <div className="taproom-hours">
-        <h4>{props.monday_hours}</h4>
-        <h4>{props.tuesday_hours}</h4>
-        <h4>{props.wednesday_hours}</h4>
-        <h4>{props.thursday_hours}</h4>
-        <h4>{props.friday_hours}</h4>
-        <h4>{props.saturday_hours}</h4>
-        <h4>{props.sunday_hours}</h4>
+        <h4>MONDAY: {props.monday_hours}</h4>
+        <h4>TUESDAY: {props.tuesday_hours}</h4>
+        <h4>WEDNESDAY: {props.wednesday_hours}</h4>
+        <h4>THURSDAY: {props.thursday_hours}</h4>
+        <h4>FRIDAY: {props.friday_hours}</h4>
+        <h4>SATURDAY: {props.saturday_hours}</h4>
+        <h4>SUNDAY: {props.sunday_hours}</h4>
       </div>
 
       <div className="taproom-faq">
@@ -51,13 +56,14 @@ const TaproomShow = (props) => {
       </div>
 
       <div>
-        <h3>{props.description}</h3>
+        <h5>{props.description}</h5>
       </div>
       
-      <div className="taproom-social-media">
-        <h4>Instagram: {props.instagram}</h4>
-        <h4>Instagram: {props.instagram}</h4>
-        <h4>Instagram: {props.instagram}</h4>
+      <div>
+       <TaproomReviewForm
+        addNewReview={props.addNewReview}
+        reviewButton = {props.reviewButton}
+      /> 
       </div>
       {taproomReviewTiles}
     </div>

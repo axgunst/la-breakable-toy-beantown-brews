@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-// import Dropzone from 'react-dropzone'
+import Dropzone from 'react-dropzone'
 import ErrorList from "./ErrorList"
 
 const TaproomReviewForm = (props) => {
@@ -130,18 +130,34 @@ const TaproomReviewForm = (props) => {
             <input type="radio" name="group_accommodations_rating" onChange={handleFormChange} value="5" id="5" checked={newReview.group_accommodations_rating === '5'}/><label>5</label>
         </fieldset>
 
-        <label htmlFor="favorite_beer">Favorite beer tried:
+        <label htmlFor="favorite_beer">Favorite beer tried
           <textarea id="favorite_beer" rows="4" type="text" name="favorite_beer" value={newReview.favorite_beer} onChange={handleFormChange}/>
         </label>
 
         <label htmlFor="body">Review
           <textarea id="body" rows="4" type="text" name="body" value={newReview.body} onChange={handleFormChange}/>
         </label>
-        
+
+        <div className="dropzone">  
+        <Dropzone onDrop={handleFileUpload}>
+          {({getRootProps, getInputProps}) => (
+            <section>
+              <div {...getRootProps()}>
+                <input {...getInputProps()} />
+                <p>Drag image here, or click to select image from your files</p>
+              </div>
+            </section>
+          )}
+        </Dropzone>
+          
+        <aside>
+          <ul>{files}</ul>
+        </aside>
+      </div>      
+
       <div className="submit-button">
-        <button>Add your review!</button>
+        <input className="button" type="submit" value="Submit Review" onSubmit={handleSubmitAddNewReview}/>
       </div>
-      
       </form>
     </div>
 )}

@@ -6,6 +6,11 @@ h1, h2, h3, h4, h5, p, nav {
 .main-logo {
   width: 650px;
 }
+
+.top-bar {
+  background-color: #FFFFFF;
+}
+
 .home-page-top-image {
   height: 550px;
   width: 1400px
@@ -35,5 +40,50 @@ h1, h2, h3, h4, h5, p, nav {
 .home-page-image {
   width: 300.33%;
 }
+
+.taproom-index-page-title {
+  font-weight: bold;
+  text-align: center;
+  width: 1300px;
+}
+
+.taproom-logo-image-box {
+  height: 10px;
+}
+
+.taproom-show-name {
+  font-weight: bold;
+}
+
+.taproom-location {
+  margin-top: 10px;
+  margin-left: 30px;
+  border: solid;
+  width: 300px;
+}
+
+.twitter-logo {
+  height: 100px;
+}
+
+.social-buttons {
+  width: 800px;
+}
+
+.taproom-hours {
+  width: 400px;
+  border: solid;
+}
+
+// .taproom-review {
+//   color: #FFFFFF;
+//   background-color: $button;
+//   font-size: 30px;
+//   border-radius: 15px;
+//   height: 40px;
+//   padding-left: 10px;
+// }
+
+
 
 

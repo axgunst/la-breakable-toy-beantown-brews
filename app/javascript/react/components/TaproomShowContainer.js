@@ -20,10 +20,9 @@ const TaproomShowContainer = (props) => {
         throw error
       } 
       const responseBody = await response.json()
-
       setTaproom(responseBody.taproom)
       setReviews(responseBody.reviews) 
-
+      
       if (responseBody.current_user !== null) {
         setSignedIn(true)
       }
@@ -31,7 +30,7 @@ const TaproomShowContainer = (props) => {
       console.error(`Error in Fetch:${err.message}`)
     } 
   } 
-
+  
   if (signedIn !== false) {
     reviewButton = 'show'
   }
@@ -55,7 +54,7 @@ const TaproomShowContainer = (props) => {
       const response = await fetch(`/api/v1/taprooms/${taproomId}/taproom_reviews`, {
         method: "POST",
         credentials: "same-origin",
-        body: "body",
+        body: body
       });
       if (!response.ok) {
         const newError = new Error(`${response.status} ${response.statusText}`);
@@ -66,7 +65,7 @@ const TaproomShowContainer = (props) => {
     } catch (err) {
       console.error(`Error in Fetch: ${err.message}`);
     }
-  };
+  }
 
   const deleteReview = async () => {
     try {
