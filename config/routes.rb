@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :taprooms, only: [:index, :show, :create] do
         resources :taproom_reviews, only: [:create, :update, :destroy]
       end
+      post "/taprooms/search", to: "taprooms#search"
     end
   end
 end

@@ -11,6 +11,11 @@ class Api::V1::TaproomsController < ApiController
    render json: {taproom: taproom, reviews: reviews}
   end
 
+  def search
+    taprooms = Taproom.where("name ILIKE ? OR description ILIKE ?", "%#{params['search_string']}%", "%#{params['search_string']}%")
+        render json: taprooms
+  end 
+
   private
 
   def taproom_params
