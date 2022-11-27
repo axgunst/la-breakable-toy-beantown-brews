@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from "react";
 import TaproomTile from './TaproomTile'
+import SearchBar from "./SearchBar.js";
 
 const TaproomIndexContainer = (props) => {
   const [taprooms, setTaprooms] = useState([])
@@ -60,9 +61,15 @@ const TaproomIndexContainer = (props) => {
           <h1 className="taproom-index-page-title">Boston's Taprooms!</h1>
         </div>
       </div>
-        <div className='grid-x grid-margin-x'>
+      <div className="search-bar">
+        <SearchBar
+          taprooms={taprooms}
+          setTaprooms={setTaprooms}
+        />
+      </div>
+      <div className='grid-x grid-margin-x'>
         {taproomTiles}
-        </div>
+      </div>
     </div>
   )
 }
