@@ -6,7 +6,7 @@ const BeerTile = props => {
     <div className="cell medium-6 small-12 large-4">
       <Link to={`/taprooms/${props.id}/beers`}>
       <div className="beer-logo-image-box">
-        <img src={props.logo} className="beer-logo-image-tile"/>
+        <img src={props.image_url} className="beer-logo-image-tile"/>
       </div>
       </Link>
     </div>

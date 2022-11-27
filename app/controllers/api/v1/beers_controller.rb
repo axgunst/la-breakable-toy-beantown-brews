@@ -1,6 +1,9 @@
 class Api::V1::BeersController < ApiController
   
   def index
+    # taproom = taproom.find(params[:id])
+    # beers = Beer.where(taproom_id: params[:id])
+    # render json: {taproom: taproom, beers: beers}
     render json: Beer.all
   end
 
