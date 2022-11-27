@@ -2,7 +2,7 @@ import React, {useState, useEffect } from "react";
 import TaproomShow from "./TaproomShow";
 
 const TaproomShowContainer = (props) => {
-
+  
   const [taproom, setTaproom] = useState({})  
   const [reviews, setReviews] = useState([])
   const [signedIn, setSignedIn] = useState(false)
@@ -35,9 +35,9 @@ const TaproomShowContainer = (props) => {
     reviewButton = 'show'
   }
 
-  useEffect(() => {
-    fetchTaproom();
-  }, [])
+  // useEffect(() => {
+  //   fetchTaproom();
+  // }, [])
 
   const addNewReview = async (payLoad) => {
     let body = new FormData();
@@ -65,34 +65,68 @@ const TaproomShowContainer = (props) => {
         const newError = new Error(`${response.status} ${response.statusText}`);
         throw newError;
       }
+      
       const responseBody = await response.json();
+      
       setReviews([...reviews, responseBody]);
     } catch (err) {
       console.error(`Error in Fetch: ${err.message}`);
     }
   }
 
-  const deleteReview = async () => {
+  // const deleteReview = async () => {
+  //   try {
+  //     const response = await fetch(`/api/v1/taprooms/taproom_reviews/${props.match.params.id}`, {
+  //       method: "DELETE",
+  //       credentials: "same-origin",
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         'Accept': 'application/json'
+  //       }, 
+  //       body: JSON.stringify()
+  //     })
+  //     if (!response.ok) {
+  //       const errorMessage = `${response.status} ${response.statusText}`
+  //       const error = new Error(`Error! ${errorMessage}`)
+  //       throw (error)
+  //     } window.location.reload()
+  //   } catch(err) {
+  //     console.error(`Error in fetch: ${err.message}`)
+  //   }
+  // }
+
+  const destroyReview = async () => {
+    const reviewId = props.match.params.reviewId
     try {
-      const response = await fetch(`/api/v1/taprooms/taproom_reviews/${props.match.params.id}`, {
-        method: "DELETE",
+      const response = await fetch(`/api/v1/taprooms/${reviewId}`, {
         credentials: "same-origin",
+        method: "DESTROY",
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
-        }, 
-        body: JSON.stringify()
+        },
+        body: JSON.stringify(reviewId)
       })
       if (!response.ok) {
-        const errorMessage = `${response.status} ${response.statusText}`
-        const error = new Error(`Error! ${errorMessage}`)
-        throw (error)
-      } window.location.reload()
+        const errorMessage = `${response.status} - (${response.statusText})`
+        const error = new Error(`${errorMessage}`)
+        throw(error)
+      } else {
+        window.location.reload()
+      }
     } catch(err) {
-      console.error(`Error in fetch: ${err.message}`)
+      console.error(`Error: ${err.message}`)
     }
   }
 
+  const handleDestroyReview = () => {
+    destroyReview()
+  }
+
+  useEffect(() => {
+    fetchTaproom();
+  }, [])
+ 
   return (
     <TaproomShow
       key={taproomId}
@@ -123,7 +157,7 @@ const TaproomShowContainer = (props) => {
       setReviews={setReviews}
       addNewReview={addNewReview}
       reviewButton = {reviewButton}
-      deleteReview = {deleteReview}
+      destroyReview = {destroyReview}
     />
   )
 }

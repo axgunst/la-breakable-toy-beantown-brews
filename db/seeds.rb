@@ -92,6 +92,110 @@ taproom_2 = Taproom.create(
   user: user_1
 )
 
+taproom_3 = Taproom.create(
+  name: "HARPOON BREWERY",
+  address: "306 Northern Ave",
+  city: "BOSTON",
+  state: "MA",
+  zipcode: "02210",
+  monday_hours: "3PM - 8PM",
+  tuesday_hours: "12PM - 8PM",
+  wednesday_hours: "12PM - 8PM",
+  thursday_hours: "12PM - 9PM",
+  friday_hours: "12PM - 10PM",
+  saturday_hours: "12PM - 10PM",
+  sunday_hours: "12PM - 8PM",
+  description: "It all started in 1986. Sure, many things have changed since the early days of Harpoon, but much has stayed the same. We still love brewing beer and enjoying it with friends. Below are a few highlights and some of our favorite memories from the past 30 years!",
+  dogs: "Humans only",
+  kitchen: "In-house menu",
+  patio: "Seasonally",
+  logo: "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/307328498_470914698417997_2096280894640461136_n.png?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zQ0Pz6qD2rwAX9Hp0ez&_nc_ht=scontent-bos5-1.xx&oh=00_AfDiQv8I1TqmF6gmtDx03ecldzMwIDT-nlDODvQupHJSGw&oe=638733E1",
+  image_url: "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/314952541_511810590995074_367210890679900537_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=QsXDaLR9KegAX-wpJqt&_nc_ht=scontent-bos5-1.xx&oh=00_AfCGh1ORKqXht841-CvilGYkgPA4GubinDMI1zdeUj_nKA&oe=63876A6D",
+  instagram: "https://www.instagram.com/harpoonbrewery/",
+  twitter: "https://twitter.com/harpoonbrewery",
+  facebook: "https://www.facebook.com/TheHarpoonBrewery",
+  official_webpage: "https://www.harpoonbrewery.com/",
+  user: user_3
+)
+
+taproom_4 = Taproom.create(
+  name: "DEMOCRACY BREWING",
+  address: "35 Temple Place",
+  city: "BOSTON",
+  state: "MA",
+  zipcode: "02111",
+  monday_hours: "CLOSED",
+  tuesday_hours: "12PM - 9PM",
+  wednesday_hours: "12PM - 9PM",
+  thursday_hours: "12PM - 10PM",
+  friday_hours: "12PM - 10PM",
+  saturday_hours: "12PM - 10PM",
+  sunday_hours: "12PM - 8PM",
+  description: "We are Democracy Brewing, a worker-owned brewery and pub committed to  making great beers and supporting our community. We opened our doors at  35 Temple Place on July 4th, Independence Day 2018! Our mission is to  re-create the traditional public house, brew the best beer in Boston,  pair it with tasty food, and serve it to you in combination with two great American ideals: democracy, and owning your own business.",
+  dogs: "Humans only",
+  kitchen: "In-house menu",
+  patio: "Seasonally",
+  logo: "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/310350434_534117395381392_9210653260840800340_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=QNkUdnXOLM8AX8vGV8q&tn=4N19z9uICGFrRG8m&_nc_ht=scontent-bos5-1.xx&oh=00_AfBT1Ajf_F2hDiN7XMwhbn-Gx50z85hzE2slA_qwnjOKEA&oe=6387A17F",
+  image_url: "https://images.squarespace-cdn.com/content/v1/56e9f40c5559861e7849bc8a/1623950921985-L8WMTYZ99OOB6HJ4I8LG/DemocracyBrewing_Space_5+%281%29.jpg?format=750w",
+  instagram: "https://www.instagram.com/democracybrewingboston/?hl=en",
+  twitter: "https://twitter.com/Democracybrewng",
+  facebook: "https://www.facebook.com/democracybrewing1/",
+  official_webpage: "https://www.democracybrewing.com/",
+  user: user_4
+)
+
+taproom_5 = Taproom.create(
+  name: "EXHIBIT A",
+  address: "81 Morton St",
+  city: "FRAMINGHAM",
+  state: "MA",
+  zipcode: "01702",
+  monday_hours: "CLOSED",
+  tuesday_hours: "CLOSED",
+  wednesday_hours: "5PM - 9PM",
+  thursday_hours: "5PM - 9PM",
+  friday_hours: "12PM - 10PM",
+  saturday_hours: "2PM - 10PM",
+  sunday_hours: "12PM - 6PM",
+  description: "At Exhibit A Brewing Company, we believe that a beer is greater than the sum of its ingredients. Its the place where you experience it, the memories you create with it, and most importantly the people you enjoy it with. It’s about a commitment to using local ingredients, providing a space where everyone feels welcome, and supporting their local community. That’s why each beer is an exhibit of our passion and commitment to where they come from. Enjoy your Exhibit A beer with family and friends, because every great story begins with Exhibit A.",
+  dogs: "All paws welcome!",
+  kitchen: "Food trucks",
+  patio: "Seasonally",
+  logo: "https://scontent-bos5-1.xx.fbcdn.net/v/t31.18172-8/13217459_483837368480314_5188776078778217690_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=INIviEdRlt4AX9sIHWZ&_nc_ht=scontent-bos5-1.xx&oh=00_AfAXt7i9Ugqw-ylhU9j3QQ0vNV9spWH322HXdbrmLyr9Vw&oe=63AA3690",
+  image_url: "https://scontent-bos5-1.xx.fbcdn.net/v/t1.6435-9/95665333_1363876413809734_5440532689859903488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=K-j23NxC9r8AX_OzUSD&_nc_ht=scontent-bos5-1.xx&oh=00_AfAWS-lkcdXTcpId0P-sBYdCsEFzOfdOudaJJSrpIHWIjA&oe=63AA2ADF",
+  instagram: "https://www.instagram.com/exhibitabrewing/",
+  twitter: "https://twitter.com/exhibitabrewing",
+  facebook: "https://www.facebook.com/democracybrewing1/",
+  official_webpage: "https://www.exhibit-a-brewing.com/",
+  user: user_4
+)
+
+taproom_6 = Taproom.create(
+  name: "TRILLIUM BREWING",
+  address: "50 Thompson Place",
+  city: "BOSTON",
+  state: "MA",
+  zipcode: "02210",
+  monday_hours: "12PM - 10PM",
+  tuesday_hours: "12PM - 10PM",
+  wednesday_hours: "12PM - 10PM",
+  thursday_hours: "12PM - 10PM",
+  friday_hours: "12PM - 11PM",
+  saturday_hours: "2PM - 11PM",
+  sunday_hours: "12PM - 8PM",
+  description: "Trillium opened in March of 2013, by JC and Esther Tetreault with the desire to create a lifestyle and experiences through the lens of a modern New England farmhouse-inspired brewery. Launched with three employees and the support of family, friends, and community, our little brewery located on Congress Street in Boston’s Fort Point neighborhood has grown to a team of more than 300. Every member of our organization has incredible drive and purpose, working passionately each day to elevate the quality of the Trillium experience.",
+  dogs: "Humans only",
+  kitchen: "In-house menu",
+  patio: "Seasonally",
+  logo: "https://scontent-bos5-1.xx.fbcdn.net/v/t31.18172-8/13217459_483837368480314_5188776078778217690_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=INIviEdRlt4AX9sIHWZ&_nc_ht=scontent-bos5-1.xx&oh=00_AfAXt7i9Ugqw-ylhU9j3QQ0vNV9spWH322HXdbrmLyr9Vw&oe=63AA3690",
+  image_url: "https://scontent-bos5-1.xx.fbcdn.net/v/t1.6435-9/95665333_1363876413809734_5440532689859903488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=K-j23NxC9r8AX_OzUSD&_nc_ht=scontent-bos5-1.xx&oh=00_AfAWS-lkcdXTcpId0P-sBYdCsEFzOfdOudaJJSrpIHWIjA&oe=63AA2ADF",
+  instagram: "https://www.instagram.com/exhibitabrewing/",
+  twitter: "https://twitter.com/exhibitabrewing",
+  facebook: "https://www.facebook.com/trilliumbrewing",
+  official_webpage: "https://www.exhibit-a-brewing.com/",
+  user: user_4
+)
+
 taproomReview_1 = TaproomReview.create(
   title: "First time visiting and will definitely be coming back!",
   body: "Can see why this place comes so highly recommended! If you like IP's then you must go here. Crowded as expected on a Saturday night, finding seats for 6 of us took a while. Only downside was only being allowed to open one tab for a large group.",
@@ -138,6 +242,39 @@ beer_2 = Beer.create(
   image_url: "https://nightshiftbrewing.com/wp-content/uploads/2020/01/Core-Shot_Nite-Lite-16oz-and-12oz_Square_2021-e1651436722300.jpg",
   user: user_2,
   taproom: taproom_2
+)
+
+beer_3 = Beer.create(
+  name: "Harpoon IPA",
+  style: "IPA",
+  abv: "6.0%",
+  description: "New England\’s Original IPA | As enjoyable today as it was in \‘93, IPA is a regional favorite and a craft beer classic. Styled after an English IPA but brewed with distinctly American hops, it]\’s citrusy, refreshing, and perfectly balanced\– as perfect on a Cape Cod beach as it is in a VT ski lodge or Boston dive bar.",
+  brewer: "Harpoon Brewery",
+  image_url: "https://www.harpoonbrewery.com/wp-content/uploads/2020/06/IPA-12CAN.png",
+  user: user_2,
+  taproom: taproom_3
+)
+
+beer_4 = Beer.create(
+  name: "A democracy brewing beer",
+  style: "IPA",
+  abv: "6.0%",
+  description: "New England\’s Original IPA | As enjoyable today as it was in \‘93, IPA is a regional favorite and a craft beer classic. Styled after an English IPA but brewed with distinctly American hops, it]\’s citrusy, refreshing, and perfectly balanced\– as perfect on a Cape Cod beach as it is in a VT ski lodge or Boston dive bar.",
+  brewer: "Democracy Brewing",
+  image_url: "https://www.harpoonbrewery.com/wp-content/uploads/2020/06/IPA-12CAN.png",
+  user: user_2,
+  taproom: taproom_4
+)
+
+beer_5 = Beer.create(
+  name: "The Cat's Meow",
+  style: "IPA",
+  abv: "6.5%",
+  description: "Aromas of tangerines and ripe stone fruits greet the nose followed by flavors of grapefruit peel, fresh navel oranges and light malt sweetness. Smooth finish with a touch of grapefruit bitterness at the end."
+  brewer: "Exhibit A",
+  image_url: "https://www.bostonwineexchange.com/images/sites/bostonwineexchange/labels/exhibit-a-the-cats-meow_1.jpg",
+  user: user_2,
+  taproom: taproom_5
 )
 
 beerReview_1 = BeerReview.create(
