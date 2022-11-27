@@ -1,26 +1,26 @@
 import React, {useState, useEffect } from "react";
-import TaproomShow from "./TaproomShow";
+import BeerShow from "./BeerShow";
 
-const TaproomShowContainer = (props) => {
+const BeerShowContainer = (props) => {
   
-  const [taproom, setTaproom] = useState({})  
+  const [beer, setBeer] = useState({})  
   const [reviews, setReviews] = useState([])
   const [signedIn, setSignedIn] = useState(false)
 
   let reviewButton = 'hide'
 
-  const taproomId = props.match.params.id
+  const beerId = props.match.params.id
 
-  const fetchTaproom = async () => {
+  const fetchBeer = async () => {
     try {
-      const response = await fetch(`/api/v1/taprooms/${taproomId}`)
+      const response = await fetch(`/api/v1/taprooms/taproom_id/${beerId}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
         throw error
       } 
       const responseBody = await response.json()
-      setTaproom(responseBody.taproom)
+      setBeer(responseBody.beer)
       setReviews(responseBody.reviews) 
       
       if (responseBody.current_user !== null) {
@@ -36,23 +36,21 @@ const TaproomShowContainer = (props) => {
   }
 
   useEffect(() => {
-    fetchTaproom();
+    fetchBeer();
   }, [])
 
   const addNewReview = async (payLoad) => {
     let body = new FormData();
     body.append("title", payLoad.title);
+    body.append("name", payLoad.name);
     body.append("body", payLoad.body);
     body.append("overall_rating", payLoad.overall_rating);
-    body.append("service_rating",payLoad.service_rating);
-    body.append("ambience_rating", payLoad.ambience_rating);
-    body.append("group_accommodations_rating", payLoad.group_accommodations_rating);
-    body.append("favorite_beer", payLoad.favorite_beer);
+    body.append("pour", payLoad.pour);
     body.append("photo", payLoad.photo);
-    body.append("taproom_id", taproomId)
+    body.append("beer_id", beerId)
 
     try {
-      const response = await fetch(`/api/v1/taprooms/${taproomId}/taproom_reviews`, {
+      const response = await fetch(`/api/v1/taprooms/taproom_id/beers/${beerId}/beer_reviews`, {
         method: "POST",
         credentials: "same-origin",
         // headers: {
@@ -98,7 +96,7 @@ const TaproomShowContainer = (props) => {
   const destroyReview = async () => {
     const reviewId = props.match.params.reviewId
     try {
-      const response = await fetch(`/api/v1/taprooms/${reviewId}`, {
+      const response = await fetch(`/api/v1/taprooms/taproom_id/beers/${beerId}`, {
         credentials: "same-origin",
         method: "DESTROY",
         headers: {
@@ -124,35 +122,19 @@ const TaproomShowContainer = (props) => {
   }
 
   useEffect(() => {
-    fetchTaproom();
+    fetchBeer();
   }, [])
  
   return (
-    <TaproomShow
-      key={taproomId}
-      id={taproomId}
-      name={taproom.name}
-      address={taproom.address}
-      city={taproom.city}
-      state={taproom.state}
-      zipcode={taproom.zipcode}
-      monday_hours={taproom.monday_hours}
-      tuesday_hours={taproom.tuesday_hours}
-      wednesday_hours={taproom.wednesday_hours}
-      thursday_hours={taproom.thursday_hours}
-      friday_hours={taproom.friday_hours}
-      saturday_hours={taproom.saturday_hours}
-      sunday_hours={taproom.sunday_hours}
-      description={taproom.description}
-      dogs ={taproom.dogs}
-      kitchen={taproom.kitchen}
-      patio={taproom.patio}
-      logo={taproom.logo}
-      image_url={taproom.image_url}
-      instagram={taproom.instagram}
-      twitter={taproom.twitter}
-      facebook={taproom.facebook}
-      official_webpage={taproom.official_webpage}
+    <BeerShow
+      key={beerId}
+      id={beerId}
+      name={beer.name}
+      style={beer.style}
+      abv={beer.abv}
+      description={beer.description}
+      brewer={beer.brewer}
+      image_url={beer.image_url}
       reviews={reviews}
       setReviews={setReviews}
       addNewReview={addNewReview}
@@ -162,4 +144,4 @@ const TaproomShowContainer = (props) => {
   )
 }
 
-export default TaproomShowContainer
+export default BeerShowContainer
