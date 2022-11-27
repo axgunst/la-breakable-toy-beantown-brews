@@ -22,13 +22,10 @@ class Api::V1::TaproomReviewsController < ApiController
   end 
 
   def destroy
-    review = TaproomReview.find(params["id"])
-    if(verify_access(review))
-      review.destroy
-      render json: TaproomReview.all
-    else
-      render status: 401
-    end
+   TaproomReview.where(review_id:params[:id]).destroy_all
+   render json: {
+    deleted_message: "Your review has been deleted"
+   }
   end
 
   private
