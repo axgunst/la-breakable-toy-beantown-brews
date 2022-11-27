@@ -9,10 +9,10 @@ class Api::V1::BeersController < ApiController
 
   def show   
 
-   beer = beer.find(params[:id])
-   reviews = BeerReview.where(beer_id: params[:id])
-   render json: {beer: beer, reviews: reviews}
-  end
+    beer = Beer.find(params[:id])
+    reviews = BeerReview.where(beer_id: params[:id])
+    render json: {beer: beer, reviews: reviews}
+   end
 
   def search
     beers = Beer.where("name ILIKE ? OR description ILIKE ?", "%#{params['search_string']}%", "%#{params['search_string']}%")

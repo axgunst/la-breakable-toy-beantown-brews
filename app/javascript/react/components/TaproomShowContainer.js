@@ -35,9 +35,9 @@ const TaproomShowContainer = (props) => {
     reviewButton = 'show'
   }
 
-  useEffect(() => {
-    fetchTaproom();
-  }, [])
+  // useEffect(() => {
+  //   fetchTaproom();
+  // }, [])
 
   const addNewReview = async (payLoad) => {
     let body = new FormData();
