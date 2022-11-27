@@ -188,11 +188,11 @@ taproom_6 = Taproom.create(
   kitchen: "In-house menu",
   patio: "Seasonally",
   logo: "https://scontent-bos5-1.xx.fbcdn.net/v/t31.18172-8/13217459_483837368480314_5188776078778217690_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=INIviEdRlt4AX9sIHWZ&_nc_ht=scontent-bos5-1.xx&oh=00_AfAXt7i9Ugqw-ylhU9j3QQ0vNV9spWH322HXdbrmLyr9Vw&oe=63AA3690",
-  image_url: "https://scontent-bos5-1.xx.fbcdn.net/v/t1.6435-9/95665333_1363876413809734_5440532689859903488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=K-j23NxC9r8AX_OzUSD&_nc_ht=scontent-bos5-1.xx&oh=00_AfAWS-lkcdXTcpId0P-sBYdCsEFzOfdOudaJJSrpIHWIjA&oe=63AA2ADF",
-  instagram: "https://www.instagram.com/exhibitabrewing/",
-  twitter: "https://twitter.com/exhibitabrewing",
+  image_url: "https://images.squarespace-cdn.com/content/v1/550ae683e4b0714e2a52392c/1628788080430-Q1MYCSSRE3W3PXQLJ9WV/Thompson-03.jpg",
+  instagram: "https://www.instagram.com/trilliumbrewing/",
+  twitter: "https://twitter.com/trilliumbrewing",
   facebook: "https://www.facebook.com/trilliumbrewing",
-  official_webpage: "https://www.exhibit-a-brewing.com/",
+  official_webpage: "https://trilliumbrewing.com/",
   user: user_4
 )
 
@@ -275,6 +275,17 @@ beer_5 = Beer.create(
   image_url: "https://www.bostonwineexchange.com/images/sites/bostonwineexchange/labels/exhibit-a-the-cats-meow_1.jpg",
   user: user_2,
   taproom: taproom_5
+)
+
+beer_6 = Beer.create(
+  name: "Really Big Bird",
+  style: "Double IPA",
+  abv: "9.0%",
+  description: "Presenting a densely hazy deep straw yellow, Really Big Bird wastes no time in offering its bouquet of fruit-forward aromatics. Beginning on the citrus side of the spectrum, we're first greeted with pungent notes of pithy orange, candied grapefruit, and lemon cello. As the glass warms, a tropical character presents itself in the form of a pineapple and papaya smoothie. Earthy undertones, centered around a piney bitterness create a wonderful balance atop a creamy, full-bodied mouthfeel."
+  brewer: "Trillium  Brewing",
+  image_url: "https://cdn.shopify.com/s/files/1/0606/6146/5304/products/ReallyBigBird2021Pour_e0823db7-1abf-48f3-a7c8-8c5e5d1e6e25_550x.jpg?v=1648240721",
+  user: user_2,
+  taproom: taproom_6
 )
 
 beerReview_1 = BeerReview.create(
