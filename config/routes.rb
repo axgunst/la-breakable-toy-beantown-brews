@@ -6,12 +6,15 @@ Rails.application.routes.draw do
   get "/taprooms", to: "static_pages#index"
   get "/taprooms/:id", to: "static_pages#index"
   get "/taprooms/:id/taproom_reviews", to: "static_pages#index"
+  get "/taprooms/:id/beers", to: "static_pages#index"
 
   namespace :api do
     namespace :v1 do
       resources :taprooms, only: [:index, :show, :create] do
         resources :taproom_reviews, only: [:create, :update, :destroy]
+        resources :beers, only: [:index, :show, :create] 
       end
+      
       post "/taprooms/search", to: "taprooms#search"
     end
   end
