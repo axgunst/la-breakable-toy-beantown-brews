@@ -1,12 +1,16 @@
-class Api::V1::TaproomsController < ApiController
+class Api::V1::TaproomReviewsController < ApiController
+  before_action :authenticate_user, only: [:create, :destroy, :update]
+  skip_before_action :verify_authenticity_token
   
   def create
+    # binding.pry
     taproom = Taproom.find(params[:taproom_id])
-    review = TaproomReview.create(review_params)
+    review = TaproomReview.new(review_params)
 
     review.taproom = taproom
 
     review.user = current_user
+    # binding.pry
     if review.save
       render json: review
     else
