@@ -7,6 +7,8 @@ const TaproomReviewTile = (props) => {
   if (props.photo != null) {
     reviewPhoto = <a href={props.photo} target="_blank"><img src={props.photo} className="taproom-review-photo"/></a>
   }
+
+
   return (
     <div>
       <h3>{props.username}</h3>

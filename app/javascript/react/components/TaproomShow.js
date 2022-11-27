@@ -63,6 +63,7 @@ const TaproomShow = (props) => {
        <TaproomReviewForm
         addNewReview={props.addNewReview}
         reviewButton = {props.reviewButton}
+        // destroyReview = {props.destroyReview}
       /> 
       </div>
       {taproomReviewTiles}
