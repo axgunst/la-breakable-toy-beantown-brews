@@ -270,7 +270,7 @@ beer_5 = Beer.create(
   name: "The Cat's Meow",
   style: "IPA",
   abv: "6.5%",
-  description: "Aromas of tangerines and ripe stone fruits greet the nose followed by flavors of grapefruit peel, fresh navel oranges and light malt sweetness. Smooth finish with a touch of grapefruit bitterness at the end."
+  description: "Aromas of tangerines and ripe stone fruits greet the nose followed by flavors of grapefruit peel, fresh navel oranges and light malt sweetness. Smooth finish with a touch of grapefruit bitterness at the end.",
   brewer: "Exhibit A",
   image_url: "https://www.bostonwineexchange.com/images/sites/bostonwineexchange/labels/exhibit-a-the-cats-meow_1.jpg",
   user: user_2,
@@ -281,7 +281,7 @@ beer_6 = Beer.create(
   name: "Really Big Bird",
   style: "Double IPA",
   abv: "9.0%",
-  description: "Presenting a densely hazy deep straw yellow, Really Big Bird wastes no time in offering its bouquet of fruit-forward aromatics. Beginning on the citrus side of the spectrum, we're first greeted with pungent notes of pithy orange, candied grapefruit, and lemon cello. As the glass warms, a tropical character presents itself in the form of a pineapple and papaya smoothie. Earthy undertones, centered around a piney bitterness create a wonderful balance atop a creamy, full-bodied mouthfeel."
+  description: "Presenting a densely hazy deep straw yellow, Really Big Bird wastes no time in offering its bouquet of fruit-forward aromatics. Beginning on the citrus side of the spectrum, we're first greeted with pungent notes of pithy orange, candied grapefruit, and lemon cello. As the glass warms, a tropical character presents itself in the form of a pineapple and papaya smoothie. Earthy undertones, centered around a piney bitterness create a wonderful balance atop a creamy, full-bodied mouthfeel.",
   brewer: "Trillium  Brewing",
   image_url: "https://cdn.shopify.com/s/files/1/0606/6146/5304/products/ReallyBigBird2021Pour_e0823db7-1abf-48f3-a7c8-8c5e5d1e6e25_550x.jpg?v=1648240721",
   user: user_2,
