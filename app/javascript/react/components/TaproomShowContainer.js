@@ -49,11 +49,16 @@ const TaproomShowContainer = (props) => {
     body.append("group_accommodations_rating", payLoad.group_accommodations_rating);
     body.append("favorite_beer", payLoad.favorite_beer);
     body.append("photo", payLoad.photo);
+    body.append("taproom_id", taproomId)
 
     try {
       const response = await fetch(`/api/v1/taprooms/${taproomId}/taproom_reviews`, {
         method: "POST",
         credentials: "same-origin",
+        // headers: {
+        //   "Content-Type": "application/json",
+        //   Accept: "application/json"
+        // },
         body: body
       });
       if (!response.ok) {
