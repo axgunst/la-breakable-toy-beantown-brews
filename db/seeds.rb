@@ -187,7 +187,7 @@ taproom_6 = Taproom.create(
   dogs: "Humans only",
   kitchen: "In-house menu",
   patio: "Seasonally",
-  logo: "https://scontent-bos5-1.xx.fbcdn.net/v/t31.18172-8/13217459_483837368480314_5188776078778217690_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=INIviEdRlt4AX9sIHWZ&_nc_ht=scontent-bos5-1.xx&oh=00_AfAXt7i9Ugqw-ylhU9j3QQ0vNV9spWH322HXdbrmLyr9Vw&oe=63AA3690",
+  logo: "https://scontent-bos5-1.xx.fbcdn.net/v/t1.18169-9/167000_177211038984737_752669_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=5iyqHy-VdrEAX8RDEtS&_nc_oc=AQkYGw96PxBezvQCvEbBJfuu3g_AViCfXS8FegrdBcE5S_POzgjCh2oPjXkHkvRQP92efNrv9aIMpigT8z9gYCwm&_nc_ht=scontent-bos5-1.xx&oh=00_AfBDZ-YzX3fISPjBLecd9qjcTqoYwTJXaiKHOYUanTXkiQ&oe=63AB2571",
   image_url: "https://images.squarespace-cdn.com/content/v1/550ae683e4b0714e2a52392c/1628788080430-Q1MYCSSRE3W3PXQLJ9WV/Thompson-03.jpg",
   instagram: "https://www.instagram.com/trilliumbrewing/",
   twitter: "https://twitter.com/trilliumbrewing",
