@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const TaproomSearchBar = (props) => {
+const BeerSearchBar = (props) => {
   const [searchString, setSearchString] = useState("")
 
   const handleChange = (event) => {
@@ -14,7 +14,7 @@ const TaproomSearchBar = (props) => {
       search_string: searchString
     })
     try {
-      const response = await fetch("/api/v1/taprooms/search", {
+      const response = await fetch("/api/v1/taprooms/taproom_id/beers/search", {
         method: "POST",
         body: body,
         headers: {
@@ -29,7 +29,7 @@ const TaproomSearchBar = (props) => {
       }
       const responseBody = await response.json()
       // debugger
-      props.setTaprooms(responseBody)
+      props.setBeers(responseBody)
     } catch (error) {
       console.error(`Error in Fetch: ${error.message}`)
     }
@@ -45,7 +45,7 @@ const TaproomSearchBar = (props) => {
             name="searchString"
             value={searchString}
             onChange={handleChange}
-            placeholder="Search taprooms"
+            placeholder="Search beers"
           />
           <div className="input-group-button">
             <input type="submit" className="button secondary" value="Search" />
@@ -56,4 +56,4 @@ const TaproomSearchBar = (props) => {
   );
 };
 
-export default TaproomSearchBar;
+export default BeerSearchBar;

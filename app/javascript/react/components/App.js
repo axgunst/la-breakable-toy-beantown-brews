@@ -5,7 +5,7 @@ import TaproomIndexContainer from './TaproomIndexContainer.js'
 import TaproomShowContainer from './TaproomShowContainer.js'
 import BeerIndexContainer from './BeerIndexContainer.js'
 import BeerShowContainer from './BeerShowContainer.js'
-import NewBeer from './NewBeer.js'
+// import NewBeer from './NewBeer.js'
 
 export const App = (props) => {
   return (

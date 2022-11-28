@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from "react";
 import BeerTile from './BeerTile'
+import BeerSearchBar from './BeerSearchBar.js'
 
 const BeerIndexContainer = (props) => {
   const [beers, setBeers] = useState([])
@@ -42,8 +43,14 @@ const BeerIndexContainer = (props) => {
     <div className='beer-index'>
       <div className="grid-x">
         <div className= "small-12 medium-6 large-8">
-          <h1 className="beer-index-page-title"> Try these in our local taproom!</h1>
+          <h1 className="beer-index-page-title">What's on tap!</h1>
         </div>
+      </div>
+      <div className="search-bar">
+        <BeerSearchBar
+          beers={beers}
+          setBeers={setBeers}
+        />
       </div>
       <div className='grid-x grid-margin-x'>
         {beerTiles}
@@ -51,5 +58,6 @@ const BeerIndexContainer = (props) => {
     </div>
   )
 }
+
 
 export default BeerIndexContainer

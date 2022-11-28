@@ -24,7 +24,6 @@ class Api::V1::BeersController < ApiController
   end
 
   def show   
-
     beer = Beer.find(params[:id])
     reviews = BeerReview.where(beer_id: params[:id])
     render json: {beer: beer, reviews: reviews, current_user: current_user}
