@@ -9,9 +9,8 @@
 <body>
   
   <nav class="top-bar">
-    <a href="/" class="main-logo"><%= image_tag("beantown-brews.png", alt: "Main-logo") %></a> 
-    <a href="/taprooms" class="taproom-nav-bar-link">TAPROOMS</a> 
-    <a href="/taprooms/taproom_id/beers" class="taproom-nav-bar-link">BEERS</a> 
+    <%=link_to image_tag("beantown-brews.png", alt: "Main-logo"), root_path, :class => "Main-logo" %>
+    <%=link_to "TAPROOMS", taprooms_path, :class => "taproom-nav-bar-link" %>
     
     <section class="top-bar-section">
       <%# <ul class="right"> %>

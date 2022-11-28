@@ -2,18 +2,18 @@ import React, {useState, useEffect } from "react";
 import BeerShow from "./BeerShow";
 
 const BeerShowContainer = (props) => {
-  
+  // debugger
   const [beer, setBeer] = useState({})  
   const [reviews, setReviews] = useState([])
   const [signedIn, setSignedIn] = useState(false)
 
   let reviewButton = 'hide'
-
+  const taproomId = props.match.params.id
   const beerId = props.match.params.id
 
   const fetchBeer = async () => {
     try {
-      const response = await fetch(`/api/v1/taprooms/taproom_id/beers/${beerId}`)
+      const response = await fetch(`/api/v1/taprooms/${taproomId}/beers/${beerId}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
@@ -50,7 +50,7 @@ const BeerShowContainer = (props) => {
     body.append("beer_id", beerId)
   
     try {
-      const response = await fetch(`/api/v1/taprooms/taproom_id/beers/${beerId}/beer_reviews`, {
+      const response = await fetch(`/api/v1/taprooms/${taproomId}/beers/${beerId}/beer_reviews`, {
         method: "POST",
         credentials: "same-origin",
         // headers: {

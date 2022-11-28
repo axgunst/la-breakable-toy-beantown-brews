@@ -59,6 +59,7 @@ a.taproom-nav-bar-link{
   font-weight: bold;
   text-align: center;
   width: 1300px;
+  margin-top: 15rem;;
 }
 
 .taproom-index {
@@ -67,12 +68,13 @@ a.taproom-nav-bar-link{
 
 .taproom-logo-image-box {
   height: 725px;
+  margin-top: 1rem;
 }
 
 .taproom-show-name {
   font-weight: bold;
   text-align: center;
-  margin-top:100px;
+  margin-top:12rem;
 }
 
 .taproom-location {
@@ -101,7 +103,7 @@ a.taproom-nav-bar-link{
 
 
 .beer-index {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .beer-show-name {
@@ -111,6 +113,10 @@ a.taproom-nav-bar-link{
 
 a:hover {
   color:#195F85;
+}
+
+.user-account {
+  margin-top: 10rem;
 }
 
 

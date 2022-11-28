@@ -3,9 +3,8 @@ import { Redirect } from 'react-router-dom'
 import Dropzone from 'react-dropzone'
 
 const NewBeer = (props) => {
+  // debugger
   const [redirect, setRedirect] = useState(null)
-  const [displayForm, setDisplayForm] = useState("hide")
-  const [files, setFiles] = useState([])
   const [newBeer, setNewBeer] = useState({
     name: "",
     style: "",
@@ -15,8 +14,11 @@ const NewBeer = (props) => {
     image_url: ""
   })
 
+  const [displayForm, setDisplayForm] = useState("hide")
+  const [files, setFiles] = useState([])
+
   const displayNewBeerForm = () => {
-    if (displayForm === 'hide') {
+    if (displayForm === props.reviewButton) {
       setDisplayForm('show')
     }
     else {
@@ -48,7 +50,7 @@ const NewBeer = (props) => {
   const handleSubmitNewBeer = async (event) => {
     event.preventDefault()
     try {
-      const response = await fetch('/api/v1/taprooms/taproom_id/beers/beer_id', {
+      const response = await fetch(`/api/v1/taprooms/${props.taproomId}/beers/`, {
         method: "POST",
         credentials: "same-origin",
         headers: {
@@ -64,7 +66,7 @@ const NewBeer = (props) => {
       }
 
       const beerBody = await response.json()
-   
+  
       if (beerBody.beer) {
         console.log("Beer was added successfully!")
         setRedirect(beerBody.beer.id)
@@ -84,9 +86,10 @@ const NewBeer = (props) => {
 
   return (
     <div className='new-beer-div'>
-      <button type="button" onClick={displayNewBeerForm}>Add a new beer</button>
+      {/* <button type="button" onClick={displayNewBeerForm}>Add a new beer</button> */}
       <h1>Add New Beer</h1>
-      <form className='new-beer' onSubmit={handleSubmitNewBeer}>
+      {/* <form onSubmit={handleSubmitNewBeer} className={`new-beer ${displayForm}`}> */}
+      <form onSubmit={handleSubmitNewBeer}>
         <label>
           Beer Name:
           <input type="text" name="name" onChange={handleInputChange} value={newBeer.name}/>

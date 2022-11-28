@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import TaproomReviewForm from "./TaproomReviewForm"
 import TaproomReviewTile from "./TaproomReviewTile"
 import NewBeer from "./NewBeer.js";
 
-const TaproomShow = (props) => {  
+const TaproomShow = (props) => { 
+  // debugger
+  const taproomId = props.id
+
+
   const taproomReviewTiles = props.reviews.map((taproomReview => {
     return (
       <TaproomReviewTile 
@@ -18,6 +23,7 @@ const TaproomShow = (props) => {
         favorite_beer={taproomReview.favorite_beer}
         photo={taproomReview.photo}
         username={taproomReview.username}
+        taproomId={taproomId}
       />
     )
   }))
@@ -26,7 +32,10 @@ const TaproomShow = (props) => {
       <h1 className="taproom-show-name">{props.name}</h1>
       {/* <img src={props.logo}/> */}
       <img src={props.image_url}/>
-      <a href="/taprooms/taproom_id/beers">Checkout whats on tap!</a>
+      {/* <a href="/taprooms/taproom_id/beers">Checkout whats on tap!</a> */}
+      <Link to={`/taprooms/${taproomId}/beers`}>Checkout whats on tap!</Link>
+      {/* string inerpolate && Link components */}
+      {/* no anchor tags */}
 
       <div className="taproom-location">
         <h4>{props.address}</h4>
@@ -72,6 +81,8 @@ const TaproomShow = (props) => {
 
       <NewBeer
         handleSubmitNewBeer={props.handleSubmitNewBeer}
+        reviewButton = {props.reviewButton}
+        taproomId = {taproomId}
       />
       </div>
       {taproomReviewTiles}

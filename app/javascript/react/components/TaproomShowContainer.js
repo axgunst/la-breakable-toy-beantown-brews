@@ -2,7 +2,7 @@ import React, {useState, useEffect } from "react";
 import TaproomShow from "./TaproomShow";
 
 const TaproomShowContainer = (props) => {
-  
+  // debugger
   const [taproom, setTaproom] = useState({})  
   const [reviews, setReviews] = useState([])
   const [signedIn, setSignedIn] = useState(false)
@@ -68,7 +68,6 @@ const TaproomShowContainer = (props) => {
       }
       
       const responseBody = await response.json();
-      
       setReviews([...reviews, responseBody]);
     } catch (err) {
       console.error(`Error in Fetch: ${err.message}`);

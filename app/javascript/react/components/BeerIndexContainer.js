@@ -6,15 +6,16 @@ const BeerIndexContainer = (props) => {
   const [beers, setBeers] = useState([])
   
   const getBeers = async () => {
-    // debugger
+    const taproomId = props.match.params.id
+   
     try {
-      const response = await fetch("/api/v1/taprooms/:taproom_id/beers")
+      const response = await fetch(`/api/v1/taprooms/${taproomId}/beers`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
-      setBeers(responseBody)
+      setBeers(responseBody.beers) 
     } catch (error) {
       console.error(`Error in Fetch: ${error.message}`)
     }
