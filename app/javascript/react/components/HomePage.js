@@ -7,7 +7,7 @@ export const HomePage = (props) => {
   return (
     <div className='home-page'>
       <img className='home-page-top-image'src="https://www.samueladams.com:443//app_media/SamAdamsRedux/Modules/Split-Content-Hero-Block-Images/2020-Brewery-and-Tap-Room/TapRooms_MainHeader_Taps.file"/>
-      <a href="http://localhost:3000/taprooms">Checkout the taprooms!</a>
+      <a href="/taprooms">Checkout the taprooms!</a>
       <h4 className='home-page-subtitle'>BOSTON BREWED & POURED</h4>
       <p className='home-page-info-block'>Beantown Brews connects local beer enthusiasts on the search for the perfect pour. With over 130 breweries in the BayState, everyone is bound to find their perfect pint!</p> 
       <div className='home-page-image grid-x'>

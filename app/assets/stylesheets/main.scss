@@ -1,14 +1,18 @@
 @import "colors";
+@import url('https://fonts.googleapis.com/css2?family=Biryani&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap');
 
 h1, h2, h3, h4, h5, p, nav {
-  font-family:Verdana,Arial,sans-serif;
+  font-family: 'Biryani';
 }
+
+
 .main-logo {
   width: 650px;
 }
 
 .top-bar {
-  background-color: #FFFFFF;
+  background-color: #FFFF;
+  // background-color: #c4ced3;
 }
 
 .home-page-top-image {
@@ -53,6 +57,7 @@ h1, h2, h3, h4, h5, p, nav {
 
 .taproom-show-name {
   font-weight: bold;
+  text-align: center;
 }
 
 .taproom-location {
@@ -74,6 +79,8 @@ h1, h2, h3, h4, h5, p, nav {
   width: 400px;
   border: solid;
 }
+
+
 
 // .taproom-review {
 //   color: #FFFFFF;

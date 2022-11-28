@@ -86,7 +86,7 @@ const TaproomReviewForm = (props) => {
   
   return (
     <div className={`taproom-review-form-div taproom-review-button ${props.reviewButton}`}>
-      <button type="button" onClick={displayReviewForm}>Write Review</button>
+      <button className="button write-review" type="button" onClick={displayReviewForm}>Write Review</button>
       <form onSubmit={handleSubmitAddNewReview} className={`new-review ${displayForm}`}>
         <ErrorList errors={errors} />
         
