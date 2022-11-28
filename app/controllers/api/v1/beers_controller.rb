@@ -1,15 +1,18 @@
 class Api::V1::BeersController < ApiController
   skip_before_action :verify_authenticity_token
-  before_action :verify_authenticity_token, only: [:create]
+  # before_action :verify_authenticity_token, only: [:create]
   
   
   def index
-    # taproom = taproom.find(params[:id])
+    # binding.pry
+    taproom = Taproom.find(params[:taproom_id])
+    taproom_beers = taproom.beers
     # beers = Beer.where(taproom_id: params[:id])
     # render json: {taproom: taproom, beers: beers}
 
     # render json: Beer.find(taproom)
-    render json: Beer.all
+    # render json: Beer.all
+    render json: { beers: taproom_beers }
   end
 
   def create
@@ -17,7 +20,7 @@ class Api::V1::BeersController < ApiController
     beer.user = current_user
     
     if beer.save
-      render json: beer 
+      render json: {beer: beer} 
     else
       render json: {errors: beer.errors.full_messages.to_sentence}
     end
