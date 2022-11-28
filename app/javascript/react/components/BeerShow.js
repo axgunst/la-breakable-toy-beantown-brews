@@ -23,7 +23,7 @@ const BeerShow = (props) => {
       <h1 className="beer-show-name">{props.name}</h1>
       {/* <img src={props.logo}/> */}
       <img src={props.image_url}/>
-
+     
       <div className="beer-info">
         <h4>{props.name}</h4>
         <h4>{props.style}</h4>
