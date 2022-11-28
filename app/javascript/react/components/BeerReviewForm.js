@@ -110,8 +110,6 @@ const BeerReviewForm = (props) => {
             <input type="radio" name="overall_rating" onChange={handleFormChange} value="5" id="5" checked={newReview.overall_rating === '5'}/><label>5</label>
         </fieldset>
 
-        
-
         <label htmlFor="body">Review
           <textarea id="body" rows="4" type="text" name="body" value={newReview.body} onChange={handleFormChange}/>
         </label>

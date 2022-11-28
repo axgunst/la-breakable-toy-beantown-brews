@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TaproomReviewForm from "./TaproomReviewForm"
 import TaproomReviewTile from "./TaproomReviewTile"
+import NewBeer from "./NewBeer.js";
 
 const TaproomShow = (props) => {  
   const taproomReviewTiles = props.reviews.map((taproomReview => {
@@ -64,10 +65,14 @@ const TaproomShow = (props) => {
       
       <div>
        <TaproomReviewForm
-        addNewReview={props.addNewReview}
-        reviewButton = {props.reviewButton}
+          addNewReview={props.addNewReview}
+          reviewButton = {props.reviewButton}
         // destroyReview = {props.destroyReview}
       /> 
+
+      <NewBeer
+        handleSubmitNewBeer={props.handleSubmitNewBeer}
+      />
       </div>
       {taproomReviewTiles}
     </div>
