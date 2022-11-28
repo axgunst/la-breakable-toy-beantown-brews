@@ -22,7 +22,7 @@ const TaproomShowContainer = (props) => {
       const responseBody = await response.json()
       setTaproom(responseBody.taproom)
       setReviews(responseBody.reviews) 
-      
+
       if (responseBody.current_user !== null) {
         setSignedIn(true)
       }
@@ -34,6 +34,7 @@ const TaproomShowContainer = (props) => {
   if (signedIn !== false) {
     reviewButton = 'show'
   }
+  // debugger
 
   useEffect(() => {
     fetchTaproom();

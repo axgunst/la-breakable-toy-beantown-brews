@@ -1,5 +1,7 @@
 class Api::V1::TaproomsController < ApiController
-  
+  # before_action :authenticate_user
+  skip_before_action :verify_authenticity_token
+
   def index
     render json: Taproom.all
   end
@@ -8,7 +10,8 @@ class Api::V1::TaproomsController < ApiController
 
    taproom = Taproom.find(params[:id])
    reviews = TaproomReview.where(taproom_id: params[:id])
-   render json: {taproom: taproom, reviews: reviews}
+   render json: {taproom: taproom, reviews: reviews, current_user: current_user}
+
   end
 
   def search

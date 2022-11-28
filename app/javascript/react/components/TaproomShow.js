@@ -25,6 +25,7 @@ const TaproomShow = (props) => {
       <h1 className="taproom-show-name">{props.name}</h1>
       {/* <img src={props.logo}/> */}
       <img src={props.image_url}/>
+      <a href="/taprooms/taproom_id/beers">Checkout whats on tap!</a>
 
       <div className="taproom-location">
         <h4>{props.address}</h4>

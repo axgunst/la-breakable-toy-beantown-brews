@@ -1,4 +1,5 @@
 class Api::V1::BeersController < ApiController
+  skip_before_action :verify_authenticity_token
   
   def index
     # taproom = taproom.find(params[:id])
@@ -13,7 +14,7 @@ class Api::V1::BeersController < ApiController
 
     beer = Beer.find(params[:id])
     reviews = BeerReview.where(beer_id: params[:id])
-    render json: {beer: beer, reviews: reviews}
+    render json: {beer: beer, reviews: reviews, current_user: current_user}
    end
 
   def search

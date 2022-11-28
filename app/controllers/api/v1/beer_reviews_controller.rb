@@ -1,7 +1,8 @@
 class Api::V1::BeerReviewsController < ApiController
-  before_action :authenticate_user, only: [:create, :destroy, :update]
   skip_before_action :verify_authenticity_token
+  before_action :authenticate_user, only: [:create, :destroy, :update]
   
+
   def create
     taproom = Beer.find(params[:taproom_id])
     review = BeerReview.new(review_params)
