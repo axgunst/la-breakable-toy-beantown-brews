@@ -1,6 +1,6 @@
 import React, {useState, useEffect } from "react";
 import TaproomTile from './TaproomTile'
-import SearchBar from "./SearchBar.js";
+import TaproomSearchBar from "./TaproomSearchBar.js";
 
 const TaproomIndexContainer = (props) => {
   const [taprooms, setTaprooms] = useState([])
@@ -62,7 +62,7 @@ const TaproomIndexContainer = (props) => {
         </div>
       </div>
       <div className="search-bar">
-        <SearchBar
+        <TaproomSearchBar
           taprooms={taprooms}
           setTaprooms={setTaprooms}
         />
