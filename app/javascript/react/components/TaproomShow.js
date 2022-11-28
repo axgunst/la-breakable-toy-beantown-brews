@@ -38,6 +38,7 @@ const TaproomShow = (props) => {
         <a href={props.facebook}><img src="https://i.pinimg.com/236x/57/ed/a8/57eda873709dddebaa12ebe3e6a65380.jpg"/></a> 
       </div>
 
+    
       <div className="taproom-hours">
         <h4>MONDAY: {props.monday_hours}</h4>
         <h4>TUESDAY: {props.tuesday_hours}</h4>
@@ -47,6 +48,7 @@ const TaproomShow = (props) => {
         <h4>SATURDAY: {props.saturday_hours}</h4>
         <h4>SUNDAY: {props.sunday_hours}</h4>
       </div>
+      
 
       <div className="taproom-faq">
         <h3>FAQ</h3>

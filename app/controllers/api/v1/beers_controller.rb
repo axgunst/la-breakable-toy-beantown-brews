@@ -4,7 +4,8 @@ class Api::V1::BeersController < ApiController
     # taproom = taproom.find(params[:id])
     # beers = Beer.where(taproom_id: params[:id])
     # render json: {taproom: taproom, beers: beers}
-    render json: Beer.all
+binding.pry
+    render json: Beer.find(taproom)
   end
 
   def show   

@@ -5,6 +5,7 @@ const BeerIndexContainer = (props) => {
   const [beers, setBeers] = useState([])
   
   const getBeers = async () => {
+    // debugger
     try {
       const response = await fetch("/api/v1/taprooms/taproom_id/beers")
       if (!response.ok) {

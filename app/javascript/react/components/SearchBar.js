@@ -28,7 +28,8 @@ const SearchBar = (props) => {
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
-      props.setTaprooms(responseBody.taprooms)
+      // debugger
+      props.setTaprooms(responseBody)
     } catch (error) {
       console.error(`Error in Fetch: ${error.message}`)
     }
