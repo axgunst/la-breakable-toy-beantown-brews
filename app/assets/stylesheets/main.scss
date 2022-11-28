@@ -1,7 +1,7 @@
 @import "colors";
 @import url('https://fonts.googleapis.com/css2?family=Biryani&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap');
 
-h1, h2, h3, h4, h5, p, nav {
+h1, h2, h3, h4, h5, p, nav, a{
   font-family: 'Biryani';
 }
 
@@ -16,6 +16,13 @@ h1, h2, h3, h4, h5, p, nav {
   top: 0;
   width: 100%
   // background-color: #c4ced3;
+}
+
+a.taproom-nav-bar-link{
+  font-style: bold;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
 }
 
 .home-page-top-image {
@@ -102,6 +109,9 @@ h1, h2, h3, h4, h5, p, nav {
   text-align: center;
 }
 
+a:hover {
+  color:#195F85;
+}
 
 
 
