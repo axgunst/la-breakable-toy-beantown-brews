@@ -12,6 +12,9 @@ h1, h2, h3, h4, h5, p, nav {
 
 .top-bar {
   background-color: #FFFF;
+  position: fixed;
+  top: 0;
+  width: 100%
   // background-color: #c4ced3;
 }
 
@@ -51,8 +54,12 @@ h1, h2, h3, h4, h5, p, nav {
   width: 1300px;
 }
 
+.taproom-index {
+  margin: 10px;
+}
+
 .taproom-logo-image-box {
-  height: 10px;
+  height: 725px;
 }
 
 .taproom-show-name {
@@ -80,24 +87,15 @@ h1, h2, h3, h4, h5, p, nav {
   border: solid;
 }
 
-
-
-// .taproom-review {
-//   color: #FFFFFF;
-//   background-color: $button;
-//   font-size: 30px;
-//   border-radius: 15px;
-//   height: 40px;
-//   padding-left: 10px;
-// }
-
-.taproom-index {
-  margin: 10px;
+.search-bar {
+  margin-top: 30px;
 }
 
-.taproom-logo-image-box {
-  height: 725px;
+
+.beer-index {
+  margin-top: 30px;
 }
+
 
 
 
