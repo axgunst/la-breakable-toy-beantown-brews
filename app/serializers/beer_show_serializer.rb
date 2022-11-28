@@ -5,12 +5,12 @@ class BeerShowSerializer < ActiveModel::Serializer
     :abv, 
     :description, 
     :brewer, 
-    :image_url,
+    :photo,
     :current_user
 
   has_many :beer_reviews
 
   def reviews
-    object.reviews
+    object.reviews.reverse()
   end
 end

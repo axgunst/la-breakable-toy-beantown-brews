@@ -3,14 +3,13 @@ class Api::V1::BeerReviewsController < ApiController
   skip_before_action :verify_authenticity_token
   
   def create
-    # binding.pry
     taproom = Beer.find(params[:taproom_id])
     review = BeerReview.new(review_params)
 
     review.beer = beer
 
     review.user = current_user
-    # binding.pry
+  
     if review.save
       render json: review
     else
@@ -28,9 +27,13 @@ class Api::V1::BeerReviewsController < ApiController
    }
   end
 
+  def created_at
+    object.created_at.strftime("%b %d %Y")
+  end
+
   private
 
   def review_params
-    params.permit(:title, :name, :overall_rating, :pour, :photo, :image_url)
+    params.permit(:title, :name, :overall_rating, :pour, :description, :photo)
   end 
 end
