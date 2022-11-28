@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BeerReviewTile from "./BeerReviewTile"
-import BeerReviewForm from "./TaproomReviewForm"
+import BeerReviewForm from "./BeerReviewForm"
 
 const BeerShow = (props) => {  
   const beerReviewTiles = props.reviews.map((beerReview => {

@@ -28,6 +28,10 @@ class Api::V1::TaproomReviewsController < ApiController
    }
   end
 
+  def created_at
+    object.created_at.strftime("%b %d %Y")
+  end
+
   private
 
   def review_params

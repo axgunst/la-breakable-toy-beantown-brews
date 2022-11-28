@@ -2,9 +2,9 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import HomePage from './HomePage'
 import TaproomIndexContainer from './TaproomIndexContainer.js'
-import TaproomShowContainer from './TaproomShowContainer'
+import TaproomShowContainer from './TaproomShowContainer.js'
 import BeerIndexContainer from './BeerIndexContainer.js'
-import BeerShowContainer from './BeerShowContainer'
+import BeerShowContainer from './BeerShowContainer.js'
 
 export const App = (props) => {
   return (

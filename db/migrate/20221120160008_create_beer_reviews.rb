@@ -6,7 +6,7 @@ class CreateBeerReviews < ActiveRecord::Migration[5.2]
       t.string :overall_rating, null: false
       t.string :pour
       t.string :body, null: false
-      t.string :image_url
+      t.string :photo
 
       t.belongs_to :user, null: false
       t.belongs_to :beer, null: false

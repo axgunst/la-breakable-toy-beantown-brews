@@ -294,7 +294,7 @@ beerReview_1 = BeerReview.create(
   overall_rating: "5",
   pour: "On Tap",
   body: "Best double ipa available, so glad it's one of their year-round beers",
-  image_url: "https://s3-media0.fl.yelpcdn.com/bphoto/IiCqCxRM89uj9ad1TQx2cw/o.jpg",
+  photo: "https://s3-media0.fl.yelpcdn.com/bphoto/IiCqCxRM89uj9ad1TQx2cw/o.jpg",
   user: user_1,
   beer: beer_1,
 )
@@ -305,7 +305,7 @@ beerReview_2 = BeerReview.create(
   overall_rating: "4",
   pour: "Can",
   body: "One of the best light lagers I've ever had, was so good I got a 6pack to take home. Definitely recommend you try this",
-  image_url: "https://s3-media0.fl.yelpcdn.com/bphoto/IiCqCxRM89uj9ad1TQx2cw/o.jpg",
+  photo: "https://s3-media0.fl.yelpcdn.com/bphoto/IiCqCxRM89uj9ad1TQx2cw/o.jpg",
   user: user_2,
   beer: beer_2
 )

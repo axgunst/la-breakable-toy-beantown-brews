@@ -48,7 +48,7 @@ const BeerShowContainer = (props) => {
     body.append("pour", payLoad.pour);
     body.append("photo", payLoad.photo);
     body.append("beer_id", beerId)
-
+  
     try {
       const response = await fetch(`/api/v1/taprooms/taproom_id/beers/${beerId}/beer_reviews`, {
         method: "POST",

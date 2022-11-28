@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2022_11_20_160008) do
     t.string "overall_rating", null: false
     t.string "pour"
     t.string "body", null: false
-    t.string "image_url"
+    t.string "photo"
     t.bigint "user_id", null: false
     t.bigint "beer_id", null: false
     t.datetime "created_at", null: false
