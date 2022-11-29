@@ -1,7 +1,7 @@
 <h1 align="center">Beantown Brews</h1>
 
 <p align="center">
-  <img src="/app/assets/images/beantown-brews.png" alt="Beantown brews logo" width="100px" height="100px"/>
+  <img src="/app/assets/images/beantown-brews.png" alt="Beantown brews logo" width="500px" height="300px"/>
 
 <i>Beantown Brews connects local beer enthusiasts on the search for the perfect pour. With over 130 breweries in the BayState, everyone is bound to find their perfect pint!</i>
 <br>
@@ -46,7 +46,6 @@ Prerequisite: have Yarn installed, and Ruby version 2.7.3.
 6. Open the development site **[localhost:3000](http://localhost:3000)**
     
 ## 🤝 Contributing
-
 
 1. Clone the Project
 2. Create your Feature Branch (`git checkout -b feature-contributing main`)
