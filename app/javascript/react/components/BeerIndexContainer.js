@@ -53,7 +53,7 @@ const BeerIndexContainer = (props) => {
           setBeers={setBeers}
         />
       </div>
-      <div className='grid-x grid-margin-x'>
+      <div className='grid-x grid-margin-x beer-logo-image-box'>
         {beerTiles}
       </div>
     </div>
