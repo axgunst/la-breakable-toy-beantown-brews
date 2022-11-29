@@ -2,7 +2,7 @@ import React, {useState, useEffect } from "react";
 import TaproomShow from "./TaproomShow";
 
 const TaproomShowContainer = (props) => {
-  // debugger
+
   const [taproom, setTaproom] = useState({})  
   const [reviews, setReviews] = useState([])
   const [signedIn, setSignedIn] = useState(false)
@@ -74,27 +74,6 @@ const TaproomShowContainer = (props) => {
     }
   }
 
-  // const deleteReview = async () => {
-  //   try {
-  //     const response = await fetch(`/api/v1/taprooms/taproom_reviews/${props.match.params.id}`, {
-  //       method: "DELETE",
-  //       credentials: "same-origin",
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         'Accept': 'application/json'
-  //       }, 
-  //       body: JSON.stringify()
-  //     })
-  //     if (!response.ok) {
-  //       const errorMessage = `${response.status} ${response.statusText}`
-  //       const error = new Error(`Error! ${errorMessage}`)
-  //       throw (error)
-  //     } window.location.reload()
-  //   } catch(err) {
-  //     console.error(`Error in fetch: ${err.message}`)
-  //   }
-  // }
-
   const destroyReview = async () => {
     const reviewId = props.match.params.reviewId
     try {
@@ -117,10 +96,6 @@ const TaproomShowContainer = (props) => {
     } catch(err) {
       console.error(`Error: ${err.message}`)
     }
-  }
-
-  const handleDestroyReview = () => {
-    destroyReview()
   }
 
   useEffect(() => {
@@ -157,7 +132,6 @@ const TaproomShowContainer = (props) => {
       setReviews={setReviews}
       addNewReview={addNewReview}
       reviewButton = {reviewButton}
-      destroyReview = {destroyReview}
     />
   )
 }

@@ -5,7 +5,7 @@ class BeerShowSerializer < ActiveModel::Serializer
     :abv, 
     :description, 
     :brewer, 
-    :photo,
+    :image_url,
     :current_user
 
   has_many :beer_reviews
