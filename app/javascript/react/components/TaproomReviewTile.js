@@ -171,25 +171,28 @@ let reviewPhoto
           <div className='small-8 medium-8 large-8'>
             <div className="grid-x">
               <h3 className="cell small-4 text-left username">{props.username}</h3>
+              <h4>{props.title}</h4>
+              <ul>
+              <li className="cell small-4 text-left">Overall rating: {props.overall_rating}</li>
+              <li className="cell small-4 text-left">Service rating: {props.service_rating}</li>
+              <li className="cell small-4 text-left">Vibes rating: {props.ambience_rating}</li>
+              </ul>
+              <p className="cell small-4 text-left">Seating availability for a group: {props.group_accommodations_rating}</p>
+              <p className="cell small-4 text-left">Favorite beer tried this trip: {props.favorite_beer}</p>
+              <p>Thoughts: {props.body}</p>
               {memberDelete}
               {memberEdit}
               {editForm}
-              <h4>{props.title}</h4>
               <button onClick={handleDeleteReview}>
                 Delete 
               </button>
               <button onClick={handleEditReview}>
                 Edit 
               </button>
-              <ul>
-              <li>Overall rating: {props.overall_rating}</li>
-              <li>Service rating: {props.service_rating}</li>
-              <li>Vibes rating: {props.ambience_rating}</li>
-              </ul>
-              <p>Seating availability for a group: {props.group_accommodations_rating}</p>
-              <p>Favorite beer tried this trip: {props.favorite_beer}</p>
-              <p>Thoughts: {props.body}</p>
-              {reviewPhoto}
+              <div className="grid-x small-4 medium-4 large-4">
+                {reviewPhoto}
+              </div>
+              
               <p>{props.created_at}</p>
             </div>
             

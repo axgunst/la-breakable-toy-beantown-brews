@@ -85,7 +85,7 @@ const TaproomReviewForm = (props) => {
   }
   
   return (
-    <div className={`taproom-review-form-div taproom-review-button ${props.reviewButton}`}>
+    <div className={`review-form-div review-button ${props.reviewButton}`}>
       <button className="button write-review" type="button" onClick={displayReviewForm}>Write Review</button>
       <form onSubmit={handleSubmitAddNewReview} className={`new-review ${displayForm}`}>
         <ErrorList errors={errors} />
@@ -156,7 +156,7 @@ const TaproomReviewForm = (props) => {
       </div>      
 
       <div className="submit-button">
-        <input className="button" type="submit" value="Submit Review" onSubmit={handleSubmitAddNewReview}/>
+        <input className="button write-review" type="submit" value="Submit Review" onSubmit={handleSubmitAddNewReview}/>
       </div>
       </form>
     </div>
