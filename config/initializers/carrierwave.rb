@@ -10,9 +10,9 @@ CarrierWave.configure do |config|
       # endpoint:              'https://s3.example.com:8080' # optional, defaults to nil
     }
     if Rails.env.production?
-      config.fog_directory = ENV["S3_BUCKET"]
-    # else
-    #   config.fog_directory = ENV["S3_DEVELOPMENT_BUCKET"]
+      config.fog_directory = ENV["S3_BUCKET_PRD"]
+    else
+      config.fog_directory = ENV["S3_BUCKET_DEV"]
     end
     # config.fog_public     = false                                                 # optional, defaults to true
     # config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" } # optional, defaults to {}

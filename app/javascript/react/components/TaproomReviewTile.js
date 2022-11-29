@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const TaproomReviewTile = (props) => {
-  // debugger
+
   const [displayForm, setDisplayForm] = useState(false);
   const displayEditReview = () => {
     setDisplayForm(!displayForm)
@@ -161,7 +161,7 @@ if (displayForm === true) {
 let reviewPhoto
 
   if (props.photo != null) {
-    reviewPhoto = <a href={props.photo} target="_blank"><img src={props.photo} className="taproom-review-photo"/></a>
+    reviewPhoto = props.photo 
   }
 
   return (
@@ -190,7 +190,7 @@ let reviewPhoto
                 Edit 
               </button>
               <div className="grid-x small-4 medium-4 large-4">
-                {reviewPhoto}
+               <img src= {reviewPhoto}/>
               </div>
               
               <p>{props.created_at}</p>
