@@ -1,11 +1,7 @@
 require 'pry'
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
 user_admin = User.create(
   email: "admin@gmail.com",
   password: "adminpassword",
@@ -40,7 +36,7 @@ user_4 = User.create(
   role: "member"
 )
 
-taproom_1 = Taproom.create(
+taproom_1 = Taproom.find_or_create_by(
   name: "LORD HOBO",
   address: "5 Draper St",
   city: "WOBURN",
@@ -66,7 +62,7 @@ taproom_1 = Taproom.create(
   user: user_1
 )
 
-taproom_2 = Taproom.create(
+taproom_2 = Taproom.find_or_create_by(
   name: "NIGHT SHIFT BREWING",
   address: "87 Santilli Hwy",
   city: "EVERETTE",
@@ -92,7 +88,7 @@ taproom_2 = Taproom.create(
   user: user_1
 )
 
-taproom_3 = Taproom.create(
+taproom_3 = Taproom.find_or_create_by(
   name: "HARPOON BREWERY",
   address: "306 Northern Ave",
   city: "BOSTON",
@@ -118,7 +114,7 @@ taproom_3 = Taproom.create(
   user: user_3
 )
 
-taproom_4 = Taproom.create(
+taproom_4 = Taproom.find_or_create_by(
   name: "DEMOCRACY BREWING",
   address: "35 Temple Place",
   city: "BOSTON",
@@ -144,7 +140,7 @@ taproom_4 = Taproom.create(
   user: user_4
 )
 
-taproom_5 = Taproom.create(
+taproom_5 = Taproom.find_or_create_by(
   name: "EXHIBIT A",
   address: "81 Morton St",
   city: "FRAMINGHAM",
@@ -170,7 +166,7 @@ taproom_5 = Taproom.create(
   user: user_4
 )
 
-taproom_6 = Taproom.create(
+taproom_6 = Taproom.find_or_create_by(
   name: "TRILLIUM BREWING",
   address: "50 Thompson Place",
   city: "BOSTON",
@@ -196,7 +192,7 @@ taproom_6 = Taproom.create(
   user: user_4
 )
 
-taproomReview_1 = TaproomReview.create(
+taproomReview_1 = TaproomReview.find_or_create_by(
   title: "First time visiting and will definitely be coming back!",
   body: "Can see why this place comes so highly recommended! If you like IP's then you must go here. Crowded as expected on a Saturday night, finding seats for 6 of us took a while. Only downside was only being allowed to open one tab for a large group.",
   overall_rating: "5",
@@ -209,7 +205,7 @@ taproomReview_1 = TaproomReview.create(
   taproom: taproom_1,
 )
 
-taproomReview_2 = TaproomReview.create(
+taproomReview_2 = TaproomReview.find_or_create_by(
   title: "See why this place is so popular!",
   body: "Best hidden gem in Everette. Tons of beer options including seltzers, and you can sit outside on their dog-friendly patio. The only food available was from two food trucks outside, that apparently rotate daily. But on the plus side you are allowed to bring your own food in!",
   overall_rating: "5",
@@ -222,7 +218,7 @@ taproomReview_2 = TaproomReview.create(
   taproom: taproom_2
 )
 
-beer_1 = Beer.create(
+beer_1 = Beer.find_or_create_by(
   name: "Boom Sauce Double IPA",
   style: "IPA",
   abv: "7.8%",
@@ -233,7 +229,7 @@ beer_1 = Beer.create(
   taproom: taproom_1
 )
 
-beer_2 = Beer.create(
+beer_2 = Beer.find_or_create_by(
   name: "Nite Lite",
   style: "Light lager",
   abv: "4.3%",
@@ -244,7 +240,7 @@ beer_2 = Beer.create(
   taproom: taproom_2
 )
 
-beer_3 = Beer.create(
+beer_3 = Beer.find_or_create_by(
   name: "Harpoon IPA",
   style: "IPA",
   abv: "6.0%",
@@ -255,7 +251,7 @@ beer_3 = Beer.create(
   taproom: taproom_3
 )
 
-beer_4 = Beer.create(
+beer_4 = Beer.find_or_create_by(
   name: "Roll the Dice",
   style: "IPA",
   abv: "6.2%",
@@ -266,7 +262,7 @@ beer_4 = Beer.create(
   taproom: taproom_4
 )
 
-beer_5 = Beer.create(
+beer_5 = Beer.find_or_create_by(
   name: "The Cat's Meow",
   style: "IPA",
   abv: "6.5%",
@@ -277,7 +273,7 @@ beer_5 = Beer.create(
   taproom: taproom_5
 )
 
-beer_6 = Beer.create(
+beer_6 = Beer.find_or_create_by(
   name: "Really Big Bird",
   style: "Double IPA",
   abv: "9.0%",
@@ -288,7 +284,7 @@ beer_6 = Beer.create(
   taproom: taproom_6
 )
 
-beerReview_1 = BeerReview.create(
+beerReview_1 = BeerReview.find_or_create_by(
   title: "New go to beer!",
   name: "Boom Sauce Double IPA",
   overall_rating: "5",
@@ -299,7 +295,7 @@ beerReview_1 = BeerReview.create(
   beer: beer_1,
 )
 
-beerReview_2 = BeerReview.create(
+beerReview_2 = BeerReview.find_or_create_by(
   title: "Found my new favorite beer",
   name: "Nite Lite",
   overall_rating: "4",
