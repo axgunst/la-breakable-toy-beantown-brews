@@ -30,13 +30,9 @@ const TaproomShow = (props) => {
   return (
     <div>
       <h1 className="taproom-show-name">{props.name}</h1>
-      {/* <img src={props.logo}/> */}
-      <img src={props.image_url}/>
-      {/* <a href="/taprooms/taproom_id/beers">Checkout whats on tap!</a> */}
-      <Link to={`/taprooms/${taproomId}/beers`}>Checkout whats on tap!</Link>
-      {/* string inerpolate && Link components */}
-      {/* no anchor tags */}
-
+      <img src={props.image_url} className="taproom-show-image"/>
+      <Link to={`/taprooms/${taproomId}/beers`} className="taproom-show-link-to-beer-index">Checkout whats on tap!</Link>
+    
       <div className="taproom-location">
         <h4>{props.address}</h4>
         <h4>{props.city}, {props.state}</h4>
@@ -44,9 +40,9 @@ const TaproomShow = (props) => {
       </div>
 
       <div className="social-buttons">
-        <a href={props.instagram}><img src="http://assets.stickpng.com/thumbs/627ba7278d659819b11084f4.png"/></a> 
-        <a href={props.twitter}><img className="twitter-logo"src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png"/></a> 
-        <a href={props.facebook}><img src="https://i.pinimg.com/236x/57/ed/a8/57eda873709dddebaa12ebe3e6a65380.jpg"/></a> 
+        <a href={props.instagram}><img className="instagram-logo" src="https://beantown-brews-production.s3.amazonaws.com/instagram-icon.png"/></a> 
+        <a href={props.twitter}><img className="twitter-logo"src="https://beantown-brews-production.s3.amazonaws.com/twitter-logo.png"/></a> 
+        <a href={props.facebook}><img className="facebook-logo" src="https://beantown-brews-development.s3.amazonaws.com/facebook-logo.png"/></a> 
       </div>
 
     
@@ -68,24 +64,27 @@ const TaproomShow = (props) => {
         <h4>Do we have outdoor seating? {props.patio}</h4>
       </div>
 
-      <div>
+      <div className="taproom-description">
         <h5>{props.description}</h5>
       </div>
       
-      <div>
-       <TaproomReviewForm
+      <div className="taproom-show-review-form">
+        <TaproomReviewForm
           addNewReview={props.addNewReview}
           reviewButton = {props.reviewButton}
         // destroyReview = {props.destroyReview}
-      /> 
-
-      <NewBeer
-        handleSubmitNewBeer={props.handleSubmitNewBeer}
-        reviewButton = {props.reviewButton}
-        taproomId = {taproomId}
-      />
+        /> 
       </div>
+      
       {taproomReviewTiles}
+
+      <div className="taproom-show-add-new-beer-form">
+        <NewBeer
+          handleSubmitNewBeer={props.handleSubmitNewBeer}
+          reviewButton = {props.reviewButton}
+          taproomId = {taproomId}
+        />
+      </div>
     </div>
   
   )

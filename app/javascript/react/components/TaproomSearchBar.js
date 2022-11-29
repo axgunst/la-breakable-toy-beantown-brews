@@ -40,15 +40,15 @@ const TaproomSearchBar = (props) => {
       <form onSubmit={handleSubmit}>
         <div className="input-group input-group-rounded">
           <input
-            className="input-group-field"
+            className=""
             type="search"
             name="searchString"
             value={searchString}
             onChange={handleChange}
             placeholder="Search taprooms"
           />
-          <div className="input-group-button">
-            <input type="submit" className="button secondary" value="Search" />
+          <div>
+            <input type="submit" className="button" value="Search" />
           </div>
         </div>
       </form>
