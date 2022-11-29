@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/taprooms/:taproom_id/beers", to: "static_pages#index"
   get "/taprooms/:id/beers/:id", to: "static_pages#index"
   get "/taprooms/:taproom_id/beers/:beer_id/beer_reviews", to: "static_pages#index"
+  get "/taprooms/:taproom_id/beers/:beer_id/beer_reviews/:id", to: "static_pages#index"
   # get "taprooms/:taproom_id/beers/new", to: "static_pages#index"
 
   namespace :api do

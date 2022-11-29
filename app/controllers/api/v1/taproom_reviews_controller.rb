@@ -19,7 +19,15 @@ class Api::V1::TaproomReviewsController < ApiController
   end 
 
   def update
-  end 
+    binding.pry
+    review_to_update = TaproomReview.find(params["id"])
+    review_to_update.update(review_params)
+    if review_to_update.save
+      render json: review_to_update, serializer: TravelReviewSerializer
+    else
+      render json: { error: review_to_update.errors.full_messages }
+    end
+  end
 
   def destroy
     review = TaproomReview.find(params[:id])
