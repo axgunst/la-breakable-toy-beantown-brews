@@ -61,7 +61,7 @@ const handleEditReview = async (event) => {
   event.preventDefault();
   try {
     const response = await fetch(
-      `api/v1/taprooms/${props.taproomId}/taproom_reviews/${props.id}`,
+      `/api/v1/taprooms/${props.taproomId}/taproom_reviews/${props.id}`,
       {
         method: "PATCH",
         credentials: "same-origin",
@@ -186,12 +186,12 @@ let reviewPhoto
                 </button>
               </li>
               <li>
-                <button onClick={handleEditReview}>
+                <button onClick={displayEditReview}>
                   Edit 
                 </button>
               </li>
               </ul>
-             
+
               {memberDelete}
               {memberEdit}
               {editForm}
