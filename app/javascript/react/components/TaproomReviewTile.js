@@ -80,7 +80,22 @@ const handleEditReview = async (event) => {
     const responseBody = await response.json()
     if (!responseBody.error) {
       console.log("Review was changed successfully!")
-      props.setReviews(responseBody)
+      debugger
+      // before setting/updatign state with the updated review
+      // look at all props.reviews
+      // find and relace the review just editted with the new one
+      // then we'll need to set state with upadted arrray
+      // state shuld be an array
+      // 
+      // map over props.reviews - this will create the new array to set state that we need
+      // use a conditional, for each review check if its id is the same as the upated responseBody.id
+      const updatedReviewArray = props.reviews.map((review) => {
+        // use a conditional, for each review check if its id is the same as the upated responseBody.id
+        // if it is, return the responsebOdy
+        // otherwise, return the review
+      })
+
+      // props.setReviews(updatedReviewArray)
       setDisplayForm(false)
     } else if (responseBody.error[0] === "You need to be signed in first") {
       alert("You must be signed in")

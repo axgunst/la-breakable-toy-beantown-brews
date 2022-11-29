@@ -24,6 +24,8 @@ const TaproomShow = (props) => {
         photo={taproomReview.photo}
         username={taproomReview.username}
         taproomId={taproomId}
+        setReviews={props.setReviews}
+        reviews={props.reviews}
       />
     )
   }))
