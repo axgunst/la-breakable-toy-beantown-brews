@@ -1,7 +1,7 @@
 <h1 align="center">Beantown Brews</h1>
 
 <p align="center">
-  <img src="/app/assets/images/beantown-brews.png" alt="Beantown brews logo" width="500px" height="300px"/>
+  <img src="/app/assets/images/beantown-brews.png" alt="Beantown brews logo" width="400px" height="200px"/>
 
 <i>Beantown Brews connects local beer enthusiasts on the search for the perfect pour. With over 130 breweries in the BayState, everyone is bound to find their perfect pint!</i>
 <br>
