@@ -19,7 +19,6 @@ class Api::V1::TaproomReviewsController < ApiController
   end 
 
   def update
-    binding.pry
     review_to_update = TaproomReview.find(params["id"])
     review_to_update.update(review_params)
     if review_to_update.save

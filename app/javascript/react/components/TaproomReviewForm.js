@@ -85,13 +85,13 @@ const TaproomReviewForm = (props) => {
   }
   
   return (
-    <div className={`taproom-review-form-div taproom-review-button ${props.reviewButton}`}>
-      <button className="button write-review" type="button" onClick={displayReviewForm}>Write Review</button>
+    <div className={`taproom-review-form taproom-review-button ${props.reviewButton}`}>
+      <button className="button write-review" type="button" onClick={displayReviewForm}>Click here to share a review!</button>
       <form onSubmit={handleSubmitAddNewReview} className={`new-review ${displayForm}`}>
         <ErrorList errors={errors} />
         
         <label htmlFor="title">Title
-          <input id="title" type="text" name="title" value={newReview.title} onChange={handleFormChange}/>
+          <input id="title" type="text" name="title" value={newReview.title} onChange={handleFormChange} className="form-field"/>
         </label>
 
         <fieldset>
@@ -131,11 +131,11 @@ const TaproomReviewForm = (props) => {
         </fieldset>
 
         <label htmlFor="favorite_beer">Favorite beer tried
-          <textarea id="favorite_beer" rows="4" type="text" name="favorite_beer" value={newReview.favorite_beer} onChange={handleFormChange}/>
+          <textarea id="favorite_beer" rows="4" type="text" name="favorite_beer" value={newReview.favorite_beer} onChange={handleFormChange} className="form-field"/>
         </label>
 
         <label htmlFor="body">Review
-          <textarea id="body" rows="4" type="text" name="body" value={newReview.body} onChange={handleFormChange}/>
+          <textarea id="body" rows="4" type="text" name="body" value={newReview.body} onChange={handleFormChange} className="form-field"/>
         </label>
 
         <div className="dropzone">  
@@ -144,7 +144,7 @@ const TaproomReviewForm = (props) => {
             <section>
               <div {...getRootProps()}>
                 <input {...getInputProps()} />
-                <p>Drag image here, or click to select image from your files</p>
+                <p className="button">Drag image here, or click to select image from your files</p>
               </div>
             </section>
           )}

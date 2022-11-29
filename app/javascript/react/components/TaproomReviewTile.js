@@ -105,7 +105,7 @@ if (displayForm === true) {
 
     <form onSubmit={handleEditReview}>
       <label>
-        Title:ed
+        Title:
         <input type="text" name="title" value={editedReview.title} onChange={handleInputChange}/>
       </label>
 
@@ -165,6 +165,7 @@ let reviewPhoto
   }
 
   return (
+    <div className="review-tile">
     <div className="grid-x grid-margin-x">
       <div className='small-12 medium-8 large-8 callout'>
         <div className='grid-x'>
@@ -176,19 +177,24 @@ let reviewPhoto
               <li className="cell small-4 text-left">Overall rating: {props.overall_rating}</li>
               <li className="cell small-4 text-left">Service rating: {props.service_rating}</li>
               <li className="cell small-4 text-left">Vibes rating: {props.ambience_rating}</li>
+              <li className="cell small-4 text-left">Seating availability for a group: {props.group_accommodations_rating}</li>
+              <li className="cell small-4 text-left">Favorite beer tried this trip: {props.favorite_beer}</li>
+              <li>Thoughts: {props.body}</li>
+              <li>
+                <button onClick={handleDeleteReview}>
+                Delete 
+                </button>
+              </li>
+              <li>
+                <button onClick={handleEditReview}>
+                  Edit 
+                </button>
+              </li>
               </ul>
-              <p className="cell small-4 text-left">Seating availability for a group: {props.group_accommodations_rating}</p>
-              <p className="cell small-4 text-left">Favorite beer tried this trip: {props.favorite_beer}</p>
-              <p>Thoughts: {props.body}</p>
+             
               {memberDelete}
               {memberEdit}
               {editForm}
-              <button onClick={handleDeleteReview}>
-                Delete 
-              </button>
-              <button onClick={handleEditReview}>
-                Edit 
-              </button>
               <div className="grid-x small-4 medium-4 large-4">
                <img src= {reviewPhoto}/>
               </div>
@@ -201,6 +207,7 @@ let reviewPhoto
         </div>
         
       </div>
+    </div>
     </div>
   )
 }
