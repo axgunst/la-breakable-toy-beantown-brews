@@ -161,7 +161,7 @@ if (displayForm === true) {
 let reviewPhoto
 
   if (props.photo != null) {
-    reviewPhoto = props.photo 
+    reviewPhoto = props.photo.url 
   }
 
   return (

@@ -21,8 +21,7 @@ const BeerShow = (props) => {
   return (
     <div>
       <h1 className="beer-show-name">{props.name}</h1>
-      {/* <img src={props.logo}/> */}
-      <img src={props.image_url}/>
+      <img src={props.image_url} className="beer-show-image"/>
      
       <div className="beer-info">
         <h4>{props.name}</h4>
