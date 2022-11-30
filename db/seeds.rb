@@ -1,5 +1,3 @@
-require 'pry'
-
 User.destroy_all
 
 user_admin = User.create(
