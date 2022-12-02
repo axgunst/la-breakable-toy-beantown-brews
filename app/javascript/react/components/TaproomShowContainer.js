@@ -34,7 +34,6 @@ const TaproomShowContainer = (props) => {
   if (signedIn !== false) {
     reviewButton = 'show'
   }
-  // debugger
 
   useEffect(() => {
     fetchTaproom();
@@ -56,10 +55,6 @@ const TaproomShowContainer = (props) => {
       const response = await fetch(`/api/v1/taprooms/${taproomId}/taproom_reviews`, {
         method: "POST",
         credentials: "same-origin",
-        // headers: {
-        //   "Content-Type": "application/json",
-        //   Accept: "application/json"
-        // },
         body: body
       });
       if (!response.ok) {

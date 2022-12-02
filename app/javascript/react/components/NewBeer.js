@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom'
 import Dropzone from 'react-dropzone'
 
 const NewBeer = (props) => {
-  // debugger
   const [redirect, setRedirect] = useState(null)
   const [newBeer, setNewBeer] = useState({
     name: "",

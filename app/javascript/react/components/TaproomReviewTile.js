@@ -79,8 +79,16 @@ const handleEditReview = async (event) => {
     }
     const responseBody = await response.json()
     if (!responseBody.error) {
+      // const filteredReviews = props.reviews.filter((review) => {
+      //   return review.id !== props.id
+      // })
+
+      // setReviews([...reviews, responseBody.review])
+      setReviews(responseBody.reviews)
+
       console.log("Review was changed successfully!")
-      debugger
+
+      // debugger
       // before setting/updatign state with the updated review
       // look at all props.reviews
       // find and relace the review just editted with the new one

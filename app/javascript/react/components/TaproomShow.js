@@ -5,7 +5,6 @@ import TaproomReviewTile from "./TaproomReviewTile"
 import NewBeer from "./NewBeer.js";
 
 const TaproomShow = (props) => { 
-  // debugger
   const taproomId = props.id
 
 
@@ -74,7 +73,6 @@ const TaproomShow = (props) => {
         <TaproomReviewForm
           addNewReview={props.addNewReview}
           reviewButton = {props.reviewButton}
-        // destroyReview = {props.destroyReview}
         /> 
       </div>
       

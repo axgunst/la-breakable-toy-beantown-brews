@@ -22,9 +22,11 @@ class Api::V1::TaproomReviewsController < ApiController
     review_to_update = TaproomReview.find(params["id"])
     review_to_update.photo = params["photo"]
     review_to_update.update(review_params)
+    taproom = review_to_update.taproom
 
     if review_to_update.save
-      render json: review_to_update
+      # render json: review_to_update
+      render json: taproom.reviews
     else
       render json: { error: review_to_update.errors.full_messages }
     end
