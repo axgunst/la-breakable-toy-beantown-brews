@@ -78,13 +78,13 @@ const TaproomShow = (props) => {
       
       {taproomReviewTiles}
 
-      <div className="taproom-show-add-new-beer-form">
+      {/* <div className="taproom-show-add-new-beer-form">
         <NewBeer
           handleSubmitNewBeer={props.handleSubmitNewBeer}
           reviewButton = {props.reviewButton}
           taproomId = {taproomId}
         />
-      </div>
+      </div> */}
     </div>
   
   )

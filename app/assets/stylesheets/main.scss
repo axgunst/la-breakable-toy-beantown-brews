@@ -1,8 +1,15 @@
 @import "colors";
-@import url('https://fonts.googleapis.com/css2?family=Biryani&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Biryani&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap");
 
-h1, h2, h3, h4, h5, p, nav, a{
-  font-family: 'Biryani';
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+nav,
+a {
+  font-family: "Biryani";
 }
 
 a {
@@ -10,17 +17,16 @@ a {
 }
 
 a:hover {
-  color:#195F85;
+  color: #195f85;
 }
-
 
 .main-logo {
   width: 15rem;
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 .top-bar {
-  background-color: #FFFF;
+  background-color: #ffff;
   position: fixed;
   top: 0;
   width: 100%;
@@ -28,15 +34,15 @@ a:hover {
   // background-color: #c4ced3;
 }
 
-a.taproom-nav-bar-link{
+a.taproom-nav-bar-link {
   font-style: bold;
   font-weight: bold;
   font-size: 1.5rem;
   color: #000;
 }
 
-a.taproom-nav-bar-link:hover{
-  color:$button
+a.taproom-nav-bar-link:hover {
+  color: $button;
 }
 
 .home-page-top-image {
@@ -56,9 +62,9 @@ a.taproom-nav-bar-link:hover{
   border-radius: 1rem;
 }
 
-.home-page{
+.home-page {
   text-align: center;
-} 
+}
 
 .home-page-subtitle {
   color: $title;
@@ -85,7 +91,7 @@ a.taproom-nav-bar-link:hover{
   font-weight: bold;
   text-align: center;
   width: 150%;
-  margin-top: 15rem;;
+  margin-top: 15rem;
 }
 
 .taproom-index {
@@ -105,7 +111,7 @@ a.taproom-nav-bar-link:hover{
 .taproom-show-name {
   font-weight: bold;
   text-align: center;
-  margin-top:10rem;
+  margin-top: 10rem;
 }
 
 .taproom-show-link-to-beer-index {
@@ -113,7 +119,7 @@ a.taproom-nav-bar-link:hover{
   color: white;
   background-color: $button;
   border-radius: 1rem;
-  padding: .5rem
+  padding: 0.5rem;
 }
 
 .taproom-location {
@@ -176,7 +182,7 @@ a.taproom-nav-bar-link:hover{
 .button {
   border-radius: 1rem;
   background-color: $button;
-  color: white; 
+  color: white;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -192,7 +198,7 @@ a.taproom-nav-bar-link:hover{
 }
 
 .taproom-review-form {
-  margin-left: 2rem;;
+  margin-left: 2rem;
 }
 
 .new-beer {
@@ -208,7 +214,7 @@ a.taproom-nav-bar-link:hover{
   margin: 2rem;
 }
 
-.input{
+.input {
   border-radius: 1rem;
 }
 
@@ -236,10 +242,10 @@ input[type="password"] {
 }
 
 .sign {
-  color:black;
+  color: black;
 }
 
-input[type="search"]{
+input[type="search"] {
   border-radius: 1rem;
 }
 
@@ -256,7 +262,7 @@ input[type="search"]{
   margin-top: 1rem;
 }
 
-.beer-logo-image-box{
+.beer-logo-image-box {
   margin: 1rem;
 }
 
