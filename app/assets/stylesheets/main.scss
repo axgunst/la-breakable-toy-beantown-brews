@@ -22,7 +22,7 @@ a {
 }
 
 a:hover {
-  color: #195f85;
+  color: $main-theme;
 }
 
 //nav bar styling
@@ -164,6 +164,7 @@ input[type="submit"] {
 .search-bar {
   // position: fixed;
   // background-color: white;
+  // color: black;
   margin: 0rem;
   margin-top: 15rem;
   margin-left: 15rem;
@@ -171,8 +172,9 @@ input[type="submit"] {
 }
 
 input[type="search"] {
-  color: white;
   text-align: center;
+  color: black;
+  font-weight: bold;
   border-radius: 2rem;
 }
 

@@ -1,4 +1,4 @@
-<h2>Change your password</h2>
+<h2>CHANGE YOUR PASSWORD</h2>
 
 <div class= "user-account">
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
@@ -8,7 +8,7 @@
   <div class="field">
     <%= f.label :password, "New password" %><br />
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+      <em>(<%= @minimum_password_length %> CHARACTERS MINIMUM)</em><br />
     <% end %>
     <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
   </div>
