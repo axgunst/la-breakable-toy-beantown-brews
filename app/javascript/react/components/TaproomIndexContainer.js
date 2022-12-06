@@ -1,29 +1,29 @@
-import React, {useState, useEffect } from "react";
-import TaproomTile from './TaproomTile'
+import React, { useState, useEffect } from "react";
+import TaproomTile from "./TaproomTile";
 import TaproomSearchBar from "./TaproomSearchBar.js";
 
 const TaproomIndexContainer = (props) => {
-  const [taprooms, setTaprooms] = useState([])
-  
+  const [taprooms, setTaprooms] = useState([]);
+
   const getTaprooms = async () => {
     try {
-      const response = await fetch("/api/v1/taprooms")
+      const response = await fetch("/api/v1/taprooms");
       if (!response.ok) {
-        const errorMessage = `${response.status} (${response.statusText})`
-        throw new Error(errorMessage)
+        const errorMessage = `${response.status} (${response.statusText})`;
+        throw new Error(errorMessage);
       }
-      const responseBody = await response.json()
-      setTaprooms(responseBody)
+      const responseBody = await response.json();
+      setTaprooms(responseBody);
     } catch (error) {
-      console.error(`Error in Fetch: ${error.message}`)
+      console.error(`Error in Fetch: ${error.message}`);
     }
-  }
-  
-  useEffect(() => {
-    getTaprooms()
-  }, [])
+  };
 
-  const taproomTiles = taprooms.map(taproom => {
+  useEffect(() => {
+    getTaprooms();
+  }, []);
+
+  const taproomTiles = taprooms.map((taproom) => {
     return (
       <TaproomTile
         key={taproom.id}
@@ -51,27 +51,22 @@ const TaproomIndexContainer = (props) => {
         facebook={taproom.facebook}
         official_web_page={taproom.official_web_page}
       />
-    )
-  })
-  
+    );
+  });
+
   return (
-    <div className='taproom-index'>
+    <div className="taproom-index">
       <div className="grid-x">
-        <div className= "small-12 medium-6 large-8">
-          <h1 className="taproom-index-page-title">Boston's Taprooms!</h1>
+        <div className="small-12 medium-6 large-8">
+          <h1 className="taproom-index-page-title">BOSTON'S TAPROOMS!</h1>
         </div>
       </div>
       <div className="search-bar">
-        <TaproomSearchBar
-          taprooms={taprooms}
-          setTaprooms={setTaprooms}
-        />
+        <TaproomSearchBar taprooms={taprooms} setTaprooms={setTaprooms} />
       </div>
-      <div className='grid-x grid-margin-x'>
-        {taproomTiles}
-      </div>
+      <div className="grid-x grid-margin-x">{taproomTiles}</div>
     </div>
-  )
-}
+  );
+};
 
-export default TaproomIndexContainer
+export default TaproomIndexContainer;
