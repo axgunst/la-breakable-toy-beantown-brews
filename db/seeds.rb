@@ -1,4 +1,8 @@
 User.destroy_all
+Taproom.destroy_all
+TaproomReview.destroy_all
+Beer.destroy_all
+BeerReview.destroy_all
 
 user_admin = User.create(
   email: "admin@gmail.com",

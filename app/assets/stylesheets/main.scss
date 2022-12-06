@@ -28,7 +28,6 @@ a:hover {
 //nav bar styling
 .main-logo {
   width: 15rem;
-  // height: 0
   margin-top: 1rem;
   margin-bottom: 0rem;
 }
@@ -74,7 +73,7 @@ a.sign-up {
 .home-page-info-block {
   font-size: 1.5rem;
   margin-left: 5rem;
-  margin-right: 0rem;
+  margin-right: 5rem;
   margin-top: 5rem;
   margin-bottom: 6rem;
 }
@@ -97,7 +96,6 @@ a.sign-up {
 }
 
 .login-signup-page {
-  // background-color: #ecdcc6;
   margin-top: 10rem;
   margin-left: 10rem;
   margin-right: 10rem;
@@ -105,7 +103,6 @@ a.sign-up {
 }
 
 .new-user {
-  // background-color: #ecdcc6;
   border-radius: 2rem;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -146,7 +143,6 @@ input[type="submit"] {
 //sign-up styling
 
 .existing-user {
-  // background-color: #ecdcc6;
   border-radius: 2rem;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -175,7 +171,7 @@ input[type="submit"] {
 }
 
 input[type="search"] {
-  color: black;
+  color: white;
   text-align: center;
   border-radius: 2rem;
 }
