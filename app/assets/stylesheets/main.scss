@@ -160,6 +160,7 @@ input[type="submit"] {
   margin-top: 7rem;
   margin-bottom: 10rem;
   font-weight: bold;
+  padding-top: 2rem;
 }
 .search-bar {
   // position: fixed;
@@ -260,16 +261,23 @@ input[type="search"] {
   }
 }
 
+//styling taproom show page
+
 .taproom-show-name {
-  margin-top: 10rem;
-  margin-bottom: 3rem;
+  margin-top: 7rem;
+  // margin-left: 52rem;
+  padding-top: 1rem;
+  margin-bottom: 0rem;
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
-  background-color: pink;
+  background-color: green;
+  // position: fixed;
+  width: 50%;
 }
 
 .taproom-show-image {
+  // margin-top: 1rem;
   width: 100%;
   height: auto;
 }
