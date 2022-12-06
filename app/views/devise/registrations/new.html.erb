@@ -1,5 +1,6 @@
-<h2>Sign up</h2>
-<div class="user-account">
+<div class="login-signup-page">
+<h2 class="user-sessions-welcome">WELCOME TO BEANTOWN BREWS!</h2>
+<div class="existing-user">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -27,5 +28,6 @@
   <% end %>
 
   <%= render "devise/shared/links" %>
+</div>
 </div>
 

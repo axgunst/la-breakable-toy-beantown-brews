@@ -1,28 +1,35 @@
 @import "colors";
+@import "foundation-imports";
 @import url("https://fonts.googleapis.com/css2?family=Biryani&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap");
 
+//overall styling
 h1,
 h2,
 h3,
 h4,
 h5,
 p,
-nav,
-a {
+a,
+li,
+ul {
   font-family: "Biryani";
+  background-color: white;
 }
-
 a {
-  margin-left: 2rem;
+  color: black;
+  font-weight: bold;
+  background-color: white;
 }
 
 a:hover {
   color: #195f85;
 }
 
+//nav bar styling
 .main-logo {
   width: 15rem;
   margin-top: 1rem;
+  margin-bottom: 0rem;
 }
 
 .top-bar {
@@ -31,7 +38,6 @@ a:hover {
   top: 0;
   width: 100%;
   height: 7rem;
-  // background-color: #c4ced3;
 }
 
 a.taproom-nav-bar-link {
@@ -45,32 +51,21 @@ a.taproom-nav-bar-link:hover {
   color: $button;
 }
 
-.home-page-top-image {
-  // height: 550px;
-  height: 45rem;
-  width: 100%;
-  margin-top: 8rem;
-  margin-bottom: 3rem;
+a.sign-up {
+  color: green;
 }
 
-.home-page-link-to-taprooms {
-  font-style: bold;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
-  background-color: $button;
-  border-radius: 1rem;
-}
-
+//home page styling
 .home-page {
   text-align: center;
+  margin: 0rem;
 }
 
 .home-page-subtitle {
   color: $title;
   font-size: 3rem;
   font-weight: bold;
-  margin: 5rem;
+  // margin: 5rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
@@ -83,195 +78,199 @@ a.taproom-nav-bar-link:hover {
   margin-bottom: 6rem;
 }
 
-.home-page-image {
-  width: 300.33%;
+.home-page-link-to-taprooms {
+  position: relative;
 }
+
+.home-page-images {
+  margin: 0rem;
+}
+
+//sign in page styling
+.user-sessions-welcome {
+  text-align: center;
+  font-weight: bold;
+  color: $main-theme;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.login-signup-page {
+  background-color: #ecdcc6;
+  margin-top: 10rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  border-radius: 2rem;
+}
+
+.new-user {
+  background-color: #ecdcc6;
+  border-radius: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+}
+
+label {
+  text-align: center;
+}
+
+.field {
+  display: grid;
+  justify-content: center;
+}
+
+#user_email,
+#user_password,
+#user_username,
+#user_password_confirmation {
+  border-radius: 1rem;
+  text-align: center;
+  width: 50%;
+}
+
+#user_email:hover,
+#user_username:hover,
+#user_password:hover,
+#user_password_confirmation:hover {
+  color: red;
+}
+
+input[type="submit"] {
+  color: white;
+  background-color: $main-theme;
+  text-align: center;
+}
+
+//sign-up styling
+
+.existing-user {
+  background-color: #ecdcc6;
+  border-radius: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+}
+
+//taproom index styling
 
 .taproom-index-page-title {
-  font-weight: bold;
+  color: $main-theme;
+  background-color: white;
+  position: fixed;
   text-align: center;
-  width: 150%;
+  width: 100%;
+  margin-top: 7rem;
+  margin-bottom: 10rem;
+  font-weight: bold;
+}
+.search-bar {
+  // position: fixed;
+  // background-color: white;
+  margin: 0rem;
   margin-top: 15rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
 }
 
-.taproom-index {
-  margin: 1rem;
+input[type="search"] {
+  color: white;
+  text-align: center;
+  border-radius: 2rem;
 }
 
-.taproom-logo-image-box {
-  height: 35rem;
-  margin-top: 1rem;
+.taproom-index-box {
+  margin: 0rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.taproom-index-tile-logo {
+  height: 20rem;
+}
+
+//styling social media icons
+
+@mixin social-button($brand-color, $brand-icon) {
+  background: $brand-color;
+
+  &:before {
+    font-family: "FontAwesome";
+    content: $brand-icon;
+  }
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    background: $white;
+    border-color: $brand-color;
+  }
+}
+
+@mixin social-button($brand-color, $brand-icon) {
+  background: $brand-color;
+
+  &:before {
+    font-family: "FontAwesome";
+    content: $brand-icon;
+  }
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    background: white;
+    border-color: $brand-color;
+  }
+}
+
+.rounded-social-buttons {
+  text-align: center;
+
+  .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: $social-button-size;
+    height: $social-button-size;
+    border: $social-button-border-width solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: $social-button-font-size;
+    font-weight: normal;
+    line-height: $social-button-line-height;
+    border-radius: $social-button-border-radius;
+    transition: $social-button-transition;
+    margin-right: $social-button-margin;
+    margin-bottom: $social-button-margin;
+
+    //     &:hover,
+    //     &:focus {
+    //       transform: rotate(360deg);
+    //     }
+
+    //     &.facebook {
+    //       @include social-button($social-brand-facebook, "\f09a");
+    //     }
+
+    //     &.twitter {
+    //       @include social-button($social-brand-twitter, "\f099");
+    //     }
+
+    //     &.instagram {
+    //       @include social-button($social-brand-instagram, "\f16d");
+    //     }
+  }
+}
+
+.taproom-show-name {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: pink;
 }
 
 .taproom-show-image {
   width: 100%;
-  margin-bottom: 1rem;
-}
-
-.taproom-show-name {
-  font-weight: bold;
-  text-align: center;
-  margin-top: 10rem;
-}
-
-.taproom-show-link-to-beer-index {
-  font-size: 1.5rem;
-  color: white;
-  background-color: $button;
-  border-radius: 1rem;
-  padding: 0.5rem;
-}
-
-.taproom-location {
-  margin: 1rem 2rem;
-  border: solid;
-  width: 20rem;
-}
-
-.social-buttons {
-  border: solid;
-  width: 20rem;
-  margin: 1rem 2rem;
-}
-
-.instagram-logo {
-  height: 3rem;
-}
-
-.twitter-logo {
-  height: 4.25rem;
-}
-
-.facebook-logo {
-  height: 4rem;
-}
-
-.taproom-hours {
-  margin: 1rem 2rem;
-  width: 20rem;
-  border: solid;
-}
-
-.taproom-faq {
-  margin: 1rem 2rem;
-  margin-bottom: 1rem;
-  width: 50rem;
-  border: solid;
-}
-
-.taproom-description {
-  margin: 1rem 2rem;
-  margin-bottom: 1rem;
-  width: 85rem;
-  border: solid;
-}
-
-.search-bar {
-  margin-top: 30px;
-}
-
-.beer-index {
-  margin-top: 20px;
-}
-
-.beer-show-name {
-  margin-top: 100px;
-  text-align: center;
-}
-
-.button {
-  border-radius: 1rem;
-  background-color: $button;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.user-account {
-  margin-top: 10rem;
-}
-
-.form-field {
-  height: 4rem;
-  width: 25rem;
-  border-radius: 1rem;
-}
-
-.taproom-review-form {
-  margin-left: 2rem;
-}
-
-.new-beer {
-  margin-left: 2rem;
-}
-
-.review-tile {
-  margin: 2rem;
-}
-
-.field {
-  border-radius: 1rem;
-  margin: 2rem;
-}
-
-.input {
-  border-radius: 1rem;
-}
-
-.sign-up {
-  border-radius: 1rem;
-}
-
-.actions {
-  color: pink;
-}
-
-input[type="submit"] {
-  background-color: $button;
-  color: white;
-  margin-left: 2rem;
-  border-radius: 1rem;
-}
-
-input[type="email"] {
-  border-radius: 1rem;
-}
-
-input[type="password"] {
-  border-radius: 1rem;
-}
-
-.sign {
-  color: black;
-}
-
-input[type="search"] {
-  border-radius: 1rem;
-}
-
-.review-tile {
-  text-align: left;
-}
-
-.beer-index {
-  margin: 1rem;
-}
-
-.beer-logo-image-tile {
-  height: 25rem;
-  margin-top: 1rem;
-}
-
-.beer-logo-image-box {
-  margin: 1rem;
-}
-
-.beer-show-name {
-  margin-top: 9rem;
-}
-
-.beer-show-image {
-  width: 55%;
-  margin-bottom: 1rem;
-  margin: 2rem;
+  height: auto;
 }
