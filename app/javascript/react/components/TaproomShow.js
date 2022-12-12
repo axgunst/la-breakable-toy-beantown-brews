@@ -33,9 +33,9 @@ const TaproomShow = (props) => {
         <div className="grid-x">
           <img
             src={props.image_url}
-            className="taproom-show-image small-12 medium-6 large-6"
+            className="taproom-show-image cell small-12 medium-6 large-6"
           />
-          <h1 className="taproom-show-name small-12 medium-6 large-6">
+          <h1 className="taproom-show-name cell small-12 medium-6 large-6">
             {props.name}
           </h1>
           {/* <Link
@@ -45,22 +45,25 @@ const TaproomShow = (props) => {
           Checkout whats on tap!
         </Link> */}
 
-          <div className="taproom-location small-12 medium-3 large-3">
-            <h4>{props.address}</h4>
-            <h4>
+          <div className="taproom-location cell small-12 medium-3 large-3">
+            <h3 className="taproom-city-state">
               {props.city}, {props.state}
-            </h4>
-            <h4>{props.zipcode}</h4>
+            </h3>
+            <h3>{props.address}</h3>
+            <h3>{props.zipcode}</h3>
           </div>
 
-          <div className="rounded-social-buttons">
+          <div className="rounded-social-buttons cell small-12 medium-3 large-3">
             <a className="social-button instagram" href={props.instagram}>
               <img
                 className="instagram-logo"
                 src="https://beantown-brews-production.s3.amazonaws.com/instagram-icon.png"
               />
             </a>
-            <a class="social-button twitter" href={props.twitter}>
+            <a
+              class="social-button cell small-12 medium-3 large-3"
+              href={props.twitter}
+            >
               <img
                 className="twitter-logo"
                 src="https://beantown-brews-production.s3.amazonaws.com/twitter-logo.png"
@@ -74,14 +77,14 @@ const TaproomShow = (props) => {
             </a>
           </div>
 
-          <div className="taproom-hours">
-            <h4>MONDAY: {props.monday_hours}</h4>
-            <h4>TUESDAY: {props.tuesday_hours}</h4>
-            <h4>WEDNESDAY: {props.wednesday_hours}</h4>
-            <h4>THURSDAY: {props.thursday_hours}</h4>
-            <h4>FRIDAY: {props.friday_hours}</h4>
-            <h4>SATURDAY: {props.saturday_hours}</h4>
-            <h4>SUNDAY: {props.sunday_hours}</h4>
+          <div className="taproom-hours cell small-12 medium-3 large-3">
+            <p>MONDAY {props.monday_hours}</p>
+            <p>TUESDAY {props.tuesday_hours}</p>
+            <p>WEDNESDAY {props.wednesday_hours}</p>
+            <p>THURSDAY {props.thursday_hours}</p>
+            <p>FRIDAY {props.friday_hours}</p>
+            <p>SATURDAY {props.saturday_hours}</p>
+            <p>SUNDAY {props.sunday_hours}</p>
           </div>
 
           <div className="taproom-faq">
@@ -112,9 +115,7 @@ const TaproomShow = (props) => {
         />
       </div> */}
         </div>
-        //{" "}
       </div>
-      //{" "}
     </div>
   );
 };
