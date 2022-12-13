@@ -263,8 +263,19 @@ input[type="search"] {
 
 //styling taproom show page
 
-.taproom-show-name {
+.taproom-top-section {
+  border-color: purple;
+  border-style: solid;
+}
+
+.taproom-show-image {
   margin-top: 7rem;
+  border-color: pink;
+  border-style: solid;
+}
+
+.taproom-show-name {
+  margin-top: 7.2rem;
   margin-left: 0rem;
   // padding-right: 1rem;
   padding-top: 0.5rem;
@@ -274,15 +285,10 @@ input[type="search"] {
   font-weight: bold;
   background-color: green;
   // position: fixed;
-  width: 50%;
-  height: 50%;
 }
 
-.taproom-show-image {
-  margin-top: 7rem;
-  width: 100%;
-  height: auto;
-  padding-left: 1rem;
+.taproom-info {
+  width: 50%;
 }
 
 .taproom-location {
@@ -297,6 +303,7 @@ input[type="search"] {
 .taproom-hours {
   color: #808080;
   background-color: yellow;
+  text-align: 100%;
 }
 
 .taproom-faq {
