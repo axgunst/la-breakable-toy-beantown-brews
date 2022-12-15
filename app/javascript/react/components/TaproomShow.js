@@ -79,7 +79,11 @@ const TaproomShow = (props) => {
 
             <div className="grid-x taproom-show-buttons">
               <div className="rounded-social-buttons cell small-12 medium-6 large-6">
-                <a className="social-button instagram" href={props.instagram}>
+                <a
+                  className="social-button instagram"
+                  href={props.instagram}
+                  target="_blank"
+                >
                   <img
                     className="instagram-logo"
                     src="https://beantown-brews-production.s3.amazonaws.com/instagram-icon.png"
@@ -88,13 +92,18 @@ const TaproomShow = (props) => {
                 <a
                   class="social-button cell small-12 medium-6 large-6"
                   href={props.twitter}
+                  target="_blank"
                 >
                   <img
                     className="twitter-logo"
                     src="https://beantown-brews-production.s3.amazonaws.com/twitter-logo.png"
                   />
                 </a>
-                <a class="social-button facebook" href={props.facebook}>
+                <a
+                  class="social-button facebook"
+                  href={props.facebook}
+                  target="_blank"
+                >
                   <img
                     className="facebook-logo"
                     src="https://beantown-brews-development.s3.amazonaws.com/facebook-logo.png"
@@ -106,6 +115,7 @@ const TaproomShow = (props) => {
                 <Link
                   to={`/taprooms/${taproomId}/beers`}
                   className="taproom-show-link-to-beer-index"
+                  role="button"
                 >
                   CHECK OUT WHAT'S ON TAP!
                 </Link>
