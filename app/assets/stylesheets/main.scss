@@ -211,7 +211,7 @@ input[type="search"] {
   padding-top: 0.5rem;
   margin-bottom: 0rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -283,8 +283,8 @@ hr {
 
 .rounded-social-buttons {
   text-align: center;
-  border-color: $main-theme;
-  border-style: solid;
+  // border-color: $main-theme;
+  // border-style: solid;
 
   .social-button {
     display: inline-block;
@@ -324,9 +324,24 @@ hr {
   }
 }
 
-.on-tap-link {
-  border-color: $main-theme;
+// .on-tap-link {
+//   border-color: $main-theme;
+//   border-style: solid;
+//   text-align: center;
+//   align-items: center;
+// }
+
+.taproom-show-link-to-beer-index {
   border-style: solid;
+  border-color: $main-theme;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.taproom-show-link-to-beer-index :hover {
+  color: white;
+  background-color: $main-theme;
 }
 
 .taproom-faq {
