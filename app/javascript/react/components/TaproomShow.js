@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import TaproomReviewForm from "./TaproomReviewForm";
 import TaproomReviewTile from "./TaproomReviewTile";
+import BeerTile from "./BeerTile";
 import NewBeer from "./NewBeer.js";
 
 const TaproomShow = (props) => {
@@ -27,6 +28,22 @@ const TaproomShow = (props) => {
       />
     );
   });
+
+  const beerTiles = props.beers.map((beer) => {
+    return (
+      <BeerTile
+        key={beer.id}
+        id={beer.id}
+        name={beer.name}
+        style={beer.style}
+        abv={beer.abv}
+        description={beer.description}
+        brewer={beer.brewer}
+        image_url={beer.image_url}
+      />
+    );
+  });
+
   return (
     <div className="taproom-show-page">
       <div className="taproom-top-section">
@@ -90,7 +107,7 @@ const TaproomShow = (props) => {
                   />
                 </a>
                 <a
-                  class="social-button cell small-12 medium-6 large-6"
+                  className="social-button cell small-12 medium-6 large-6"
                   href={props.twitter}
                   target="_blank"
                 >
@@ -100,7 +117,7 @@ const TaproomShow = (props) => {
                   />
                 </a>
                 <a
-                  class="social-button facebook"
+                  className="social-button facebook"
                   href={props.facebook}
                   target="_blank"
                 >
@@ -125,15 +142,19 @@ const TaproomShow = (props) => {
         </div>
       </div>
 
-      <div className="taproom-faq">
-        <h3>FAQ</h3>
-        <h4>Are dogs allowed at our taproom? {props.dogs}</h4>
-        <h4>Do we have food available? {props.kitchen}</h4>
-        <h4>Do we have outdoor seating? {props.patio}</h4>
-      </div>
+      <div className="taproom-show-additional-info ">
+        <div className="grid-x">
+          <div className="taproom-description cell small-12 medium-6 large-6">
+            <h5>{props.description}</h5>
+          </div>
 
-      <div className="taproom-description">
-        <h5>{props.description}</h5>
+          <div className="taproom-faq cell small-12 medium-6 large-6">
+            <h3 className="taproom-faq-title">FAQ</h3>
+            <h5>ARE DOGS ALLOWED AT OUR TAPROOM?</h5>
+            <h5>DO WE HAVE FOOD AVAILABLE?</h5>
+            <h5>DO WE HAVE OUTDOOR SEATING?</h5>
+          </div>
+        </div>
       </div>
 
       <div className="taproom-show-review-form">
@@ -144,6 +165,7 @@ const TaproomShow = (props) => {
       </div>
 
       {taproomReviewTiles}
+      {beerTiles}
 
       {/* <div className="taproom-show-add-new-beer-form">
         <NewBeer

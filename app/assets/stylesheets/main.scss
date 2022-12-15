@@ -229,6 +229,10 @@ hr {
   height: 0.1rem;
 }
 
+.taproom-hours-of-operation {
+  color: #808080;
+}
+
 .taproom-days ul {
   list-style: none;
   margin-left: 0rem;
@@ -239,10 +243,6 @@ hr {
   list-style: none;
   text-align: right;
   font-size: larger;
-}
-
-.taproom-hours {
-  color: #808080;
 }
 
 .taproom-show-buttons {
@@ -339,14 +339,31 @@ hr {
   font-size: 1.15rem;
 }
 
-.taproom-show-link-to-beer-index :hover {
+.taproom-show-link-to-beer-index:hover {
   color: white;
   background-color: $main-theme;
 }
 
-.taproom-faq {
-  background-color: orange;
+.taproom-show-additional-info {
+  border-style: solid;
+  border-color: pink;
   margin-top: 3rem;
+}
+
+.taproom-faq-title {
+  font-weight: bold;
+  border-style: solid;
+  border-color: purple;
+  text-align: center;
+}
+
+.taproom-faq {
+  border-color: blue;
+}
+
+.taproom-description {
+  border-style: solid;
+  border-color: green;
 }
 
 //beer index styling
