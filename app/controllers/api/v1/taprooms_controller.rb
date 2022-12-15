@@ -11,8 +11,8 @@ class Api::V1::TaproomsController < ApiController
    taproom = Taproom.find(params[:id])
    reviews = TaproomReview.where(taproom_id: params[:id])
   #  binding.pry
-   beers = Beer.find(params[:id])
-   render json: {taproom: taproom, reviews: reviews, current_user: current_user}
+   beers = Beer.where(taproom_id: params[:id])
+   render json: {taproom: taproom, reviews: reviews, beers: beers, current_user: current_user}
 
   end
 
