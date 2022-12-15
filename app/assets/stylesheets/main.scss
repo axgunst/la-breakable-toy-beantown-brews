@@ -188,6 +188,67 @@ input[type="search"] {
   height: 20rem;
 }
 
+//styling taproom show page
+.taproom-show-page {
+  padding-left: 5rem;
+  padding-right: 5.5rem;
+}
+
+.taproom-top-section {
+  margin-top: 8rem;
+  // border-color: purple;
+  // border-style: solid;
+}
+
+.taproom-show-image {
+  width: 100%;
+  height: 35rem;
+  padding-top: 1rem;
+}
+
+.taproom-show-name {
+  margin-left: 0rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.taproom-info {
+  width: 50%;
+  padding-left: 2rem;
+}
+
+.taproom-city-state {
+  font-weight: bold;
+}
+
+hr {
+  background-color: #000;
+  height: 0.1rem;
+}
+
+.taproom-days ul {
+  list-style: none;
+  margin-left: 0rem;
+  font-size: large;
+}
+
+.taproom-hours ul {
+  list-style: none;
+  text-align: right;
+  font-size: larger;
+}
+
+.taproom-hours {
+  color: #808080;
+}
+
+.taproom-show-buttons {
+  margin-top: 5rem;
+}
+
 //styling social media icons
 
 @mixin social-button($brand-color, $brand-icon) {
@@ -222,6 +283,8 @@ input[type="search"] {
 
 .rounded-social-buttons {
   text-align: center;
+  border-color: $main-theme;
+  border-style: solid;
 
   .social-button {
     display: inline-block;
@@ -261,51 +324,53 @@ input[type="search"] {
   }
 }
 
-//styling taproom show page
-
-.taproom-top-section {
-  border-color: purple;
+.on-tap-link {
+  border-color: $main-theme;
   border-style: solid;
-}
-
-.taproom-show-image {
-  margin-top: 7rem;
-  border-color: pink;
-  border-style: solid;
-}
-
-.taproom-show-name {
-  margin-top: 7.2rem;
-  margin-left: 0rem;
-  // padding-right: 1rem;
-  padding-top: 0.5rem;
-  margin-bottom: 0rem;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  background-color: green;
-  // position: fixed;
-}
-
-.taproom-info {
-  width: 50%;
-}
-
-.taproom-location {
-  // height: 50%;
-  background-color: pink;
-}
-
-.taproom-city-state {
-  font-weight: bold;
-}
-
-.taproom-hours {
-  color: #808080;
-  background-color: yellow;
-  text-align: 100%;
 }
 
 .taproom-faq {
   background-color: orange;
+  margin-top: 3rem;
+}
+
+//beer index styling
+
+.beer-index-page-title {
+  color: $main-theme;
+  background-color: white;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  margin-top: 7rem;
+  margin-bottom: 10rem;
+  font-weight: bold;
+  padding-top: 2rem;
+}
+.search-bar {
+  // position: fixed;
+  // background-color: white;
+  // color: black;
+  margin: 0rem;
+  margin-top: 15rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+input[type="search"] {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+
+.beer-index-box {
+  margin: 0rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.beer-index-tile-logo {
+  height: 20rem;
+  width: 10rem;
 }

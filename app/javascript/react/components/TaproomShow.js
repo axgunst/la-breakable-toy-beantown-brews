@@ -28,7 +28,7 @@ const TaproomShow = (props) => {
     );
   });
   return (
-    <div>
+    <div className="taproom-show-page">
       <div className="taproom-top-section">
         <div className="grid-x">
           <img
@@ -45,54 +45,71 @@ const TaproomShow = (props) => {
               <h3 className="taproom-city-state">
                 {props.city}, {props.state}
               </h3>
-              <h3>
+              <h4>
                 {props.address}, {props.zipcode}
-              </h3>
+              </h4>
+              <hr></hr>
             </div>
 
-            <div className="taproom-hours cell small-12 medium-3 large-3">
-              <p>MONDAY {props.monday_hours}</p>
-              <p>TUESDAY {props.tuesday_hours}</p>
-              <p>WEDNESDAY {props.wednesday_hours}</p>
-              <p>THURSDAY {props.thursday_hours}</p>
-              <p>FRIDAY {props.friday_hours}</p>
-              <p>SATURDAY {props.saturday_hours}</p>
-              <p>SUNDAY {props.sunday_hours}</p>
-            </div>
-          </div>
+            <div className="grid-x taproom-hours-of-operation">
+              <div className="taproom-days cell small-12 medium-6 large-6">
+                <ul className="taproom-days-list">
+                  <li>MONDAY</li>
+                  <li>TUESDAY</li>
+                  <li>WEDNESDAY</li>
+                  <li>THURSDAY </li>
+                  <li>FRIDAY </li>
+                  <li>SATURDAY</li>
+                  <li>SUNDAY</li>
+                </ul>
+              </div>
 
-          <div className="taproom-show-buttons">
-            <div className="rounded-social-buttons cell small-12 medium-3 large-3">
-              <a className="social-button instagram" href={props.instagram}>
-                <img
-                  className="instagram-logo"
-                  src="https://beantown-brews-production.s3.amazonaws.com/instagram-icon.png"
-                />
-              </a>
-              <a
-                class="social-button cell small-12 medium-3 large-3"
-                href={props.twitter}
-              >
-                <img
-                  className="twitter-logo"
-                  src="https://beantown-brews-production.s3.amazonaws.com/twitter-logo.png"
-                />
-              </a>
-              <a class="social-button facebook" href={props.facebook}>
-                <img
-                  className="facebook-logo"
-                  src="https://beantown-brews-development.s3.amazonaws.com/facebook-logo.png"
-                />
-              </a>
+              <div className="taproom-hours cell small-12 medium-6 large-6">
+                <ul className="taproom-hours-list">
+                  <li>{props.monday_hours}</li>
+                  <li>{props.tuesday_hours}</li>
+                  <li>{props.wednesday_hours}</li>
+                  <li>{props.thursday_hours}</li>
+                  <li>{props.friday_hours}</li>
+                  <li>{props.saturday_hours}</li>
+                  <li>{props.sunday_hours}</li>
+                </ul>
+              </div>
             </div>
 
-            <div className="on-tap-link">
-              <Link
-                to={`/taprooms/${taproomId}/beers`}
-                className="taproom-show-link-to-beer-index"
-              >
-                Checkout whats on tap!
-              </Link>
+            <div className="grid-x taproom-show-buttons">
+              <div className="rounded-social-buttons cell small-12 medium-6 large-6">
+                <a className="social-button instagram" href={props.instagram}>
+                  <img
+                    className="instagram-logo"
+                    src="https://beantown-brews-production.s3.amazonaws.com/instagram-icon.png"
+                  />
+                </a>
+                <a
+                  class="social-button cell small-12 medium-6 large-6"
+                  href={props.twitter}
+                >
+                  <img
+                    className="twitter-logo"
+                    src="https://beantown-brews-production.s3.amazonaws.com/twitter-logo.png"
+                  />
+                </a>
+                <a class="social-button facebook" href={props.facebook}>
+                  <img
+                    className="facebook-logo"
+                    src="https://beantown-brews-development.s3.amazonaws.com/facebook-logo.png"
+                  />
+                </a>
+              </div>
+
+              <div className="on-tap-link cell small-12 medium-6 large-6">
+                <Link
+                  to={`/taprooms/${taproomId}/beers`}
+                  className="taproom-show-link-to-beer-index"
+                >
+                  CHECK OUT WHAT'S ON TAP!
+                </Link>
+              </div>
             </div>
           </div>
         </div>
