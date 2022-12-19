@@ -129,13 +129,13 @@ const TaproomShow = (props) => {
               </div>
 
               <div className="on-tap-link cell small-12 medium-6 large-6">
-                <Link
+                {/* <Link
                   to={`/taprooms/${taproomId}/beers`}
                   className="taproom-show-link-to-beer-index"
                   role="button"
                 >
                   CHECK OUT WHAT'S ON TAP!
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -164,8 +164,9 @@ const TaproomShow = (props) => {
         />
       </div>
 
-      {taproomReviewTiles}
-      {beerTiles}
+      <div className="taproom-show-review-tiles">{taproomReviewTiles}</div>
+
+      <div className="taproom-show-beer-tiles">{beerTiles}</div>
 
       {/* <div className="taproom-show-add-new-beer-form">
         <NewBeer

@@ -72,10 +72,9 @@ a.sign-up {
 
 .home-page-info-block {
   font-size: 1.5rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-top: 5rem;
-  margin-bottom: 6rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-top: 5rem;
 }
 
 .home-page-link-to-taprooms {
@@ -364,6 +363,16 @@ hr {
 .taproom-description {
   border-style: solid;
   border-color: green;
+}
+
+.taproom-show-review-tiles {
+  border-style: solid;
+  border-color: red;
+}
+
+.taproom-show-beer-tiles {
+  border-style: solid;
+  border-color: orange;
 }
 
 //beer index styling
