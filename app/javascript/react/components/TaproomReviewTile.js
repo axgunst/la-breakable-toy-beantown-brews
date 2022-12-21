@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const TaproomReviewTile = (props) => {
-  debugger;
   const [displayForm, setDisplayForm] = useState(false);
   const displayEditReview = () => {
     setDisplayForm(!displayForm);

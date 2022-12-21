@@ -370,48 +370,50 @@ hr {
   border-color: red;
 }
 
-.taproom-show-beer-tiles {
+.taproom-show-beer-index {
+  margin: 0rem;
+  text-align: center;
   border-style: solid;
-  border-color: orange;
+  border-color: blue;
 }
 
 //beer index styling
 
-.beer-index-page-title {
-  color: $main-theme;
-  background-color: white;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  margin-top: 7rem;
-  margin-bottom: 10rem;
-  font-weight: bold;
-  padding-top: 2rem;
-}
-.search-bar {
-  // position: fixed;
-  // background-color: white;
-  // color: black;
-  margin: 0rem;
-  margin-top: 15rem;
-  margin-left: 15rem;
-  margin-right: 15rem;
-}
+// .beer-index-page-title {
+//   color: $main-theme;
+//   background-color: white;
+//   position: fixed;
+//   text-align: center;
+//   width: 100%;
+//   margin-top: 7rem;
+//   margin-bottom: 10rem;
+//   font-weight: bold;
+//   padding-top: 2rem;
+// }
+// .search-bar {
+//   // position: fixed;
+//   // background-color: white;
+//   // color: black;
+//   margin: 0rem;
+//   margin-top: 15rem;
+//   margin-left: 15rem;
+//   margin-right: 15rem;
+// }
 
-input[type="search"] {
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  border-radius: 2rem;
-}
+// input[type="search"] {
+//   text-align: center;
+//   color: black;
+//   font-weight: bold;
+//   border-radius: 2rem;
+// }
 
-.beer-index-box {
-  margin: 0rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
+// .beer-index-box {
+//   margin: 0rem;
+//   text-align: center;
+//   margin-bottom: 1rem;
+// }
 
-.beer-index-tile-logo {
-  height: 20rem;
-  width: 10rem;
-}
+// // .beer-index-tile-logo {
+// //   height: 20rem;
+// //   width: 10rem;
+// // }

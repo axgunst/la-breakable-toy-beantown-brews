@@ -166,7 +166,9 @@ const TaproomShow = (props) => {
 
       <div className="taproom-show-review-tiles">{taproomReviewTiles}</div>
 
-      <div className="taproom-show-beer-tiles">{beerTiles}</div>
+      <div className="taproom-show-beer-index">
+        <div className="taproom-show-beer-logo">{beerTiles}</div>
+      </div>
 
       {/* <div className="taproom-show-add-new-beer-form">
         <NewBeer
