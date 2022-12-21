@@ -7,7 +7,7 @@ export const HomePage = (props) => {
       <div className="grid-x">
         <img
           className="home-page-top-image small-12 medium-12 large-12"
-          src="https://beantown-brews-production.s3.amazonaws.com/sam-adams-tap-handles.jpeg"
+          src="https://beantown-brews-production.s3.amazonaws.com/sam-adams/sam-adams-tap-handles.jpeg"
         />
         <a
           className="home-page-link-to-taprooms cell small-12 medium-12 large-12"
@@ -26,15 +26,15 @@ export const HomePage = (props) => {
         <div className="home-page-images">
           <div className="grid-x">
             <img
-              src="https://beantown-brews-production.s3.amazonaws.com/mighty-squirrel-cosmic-can.webp"
+              src="https://beantown-brews-production.s3.amazonaws.com/mighty-squirrel/beers/mighty-squirrel-cosmic-distortion-can.png"
               className="small-12 medium-4 large-4"
             />
             <img
-              src="https://beantown-brews-production.s3.amazonaws.com/might-squirrel-cloud-candy-can.jpeg"
+              src="https://beantown-brews-production.s3.amazonaws.com/mighty-squirrel/beers/might-squirrel-cloud-candy-can.jpeg"
               className="small-12 medium-4 large-4"
             />
             <img
-              src="https://beantown-brews-production.s3.amazonaws.com/mighty-squirrel-starwbarry-smooth-can.webp"
+              src="https://beantown-brews-production.s3.amazonaws.com/mighty-squirrel/beers/mighty-squirrel-strawberry-smoovy-can.png"
               className="small-12 medium-4 large-4"
             />
           </div>
