@@ -103,7 +103,7 @@ const TaproomShow = (props) => {
                 >
                   <img
                     className="instagram-logo"
-                    src="https://beantown-brews-production.s3.amazonaws.com/instagram-icon.png"
+                    src="https://beantown-brews-production.s3.amazonaws.com/social-media/instagram-logo.png"
                   />
                 </a>
                 <a
@@ -113,7 +113,7 @@ const TaproomShow = (props) => {
                 >
                   <img
                     className="twitter-logo"
-                    src="https://beantown-brews-production.s3.amazonaws.com/twitter-logo.png"
+                    src="https://beantown-brews-production.s3.amazonaws.com/social-media/twitter-logo.png"
                   />
                 </a>
                 <a
@@ -123,7 +123,7 @@ const TaproomShow = (props) => {
                 >
                   <img
                     className="facebook-logo"
-                    src="https://beantown-brews-development.s3.amazonaws.com/facebook-logo.png"
+                    src="https://beantown-brews-production.s3.amazonaws.com/social-media/facebook-logo.png"
                   />
                 </a>
               </div>
