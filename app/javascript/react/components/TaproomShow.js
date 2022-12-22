@@ -167,8 +167,12 @@ const TaproomShow = (props) => {
       <div className="taproom-show-review-tiles">{taproomReviewTiles}</div>
 
       <div className="taproom-show-beer-index">
-        <div className="taproom-show-beer-logo">{beerTiles}</div>
+        {/* <div className="grid-x"> */}
+        <div className="small-12 medium-6 large-4">
+          <div className="taproom-show-beer-logo grid-x">{beerTiles}</div>
+        </div>
       </div>
+      {/* </div> */}
 
       {/* <div className="taproom-show-add-new-beer-form">
         <NewBeer
