@@ -47,9 +47,9 @@ const BeerIndexContainer = (props) => {
           <h1 className="beer-index-page-title">What's on tap!</h1>
         </div>
       </div>
-      <div className="search-bar">
+      {/* <div className="search-bar">
         <BeerSearchBar beers={beers} setBeers={setBeers} />
-      </div>
+      </div> */}
       <div className="grid-x grid-margin-x">{beerTiles}</div>
     </div>
   );
