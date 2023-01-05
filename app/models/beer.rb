@@ -6,6 +6,6 @@ class Beer < ApplicationRecord
   has_many :beer_reviews
   
   belongs_to :user
-  belongs_to :taproom
+  belongs_to :brand
   
 end

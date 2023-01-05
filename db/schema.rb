@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_20_160008) do
+ActiveRecord::Schema.define(version: 2023_01_05_165034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 2022_11_20_160008) do
 
   create_table "beers", force: :cascade do |t|
     t.string "name", null: false
-    t.string "style", null: false
-    t.string "abv"
     t.string "description"
     t.string "brewer", null: false
+    t.string "style", null: false
+    t.string "abv"
     t.string "image_url"
     t.bigint "user_id", null: false
     t.bigint "taproom_id", null: false
@@ -43,6 +43,21 @@ ActiveRecord::Schema.define(version: 2022_11_20_160008) do
     t.datetime "updated_at", null: false
     t.index ["taproom_id"], name: "index_beers_on_taproom_id"
     t.index ["user_id"], name: "index_beers_on_user_id"
+  end
+
+  create_table "brands", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "logo", null: false
+    t.string "description", null: false
+    t.string "image_url"
+    t.string "official_webpage"
+    t.string "instagram"
+    t.string "twitter"
+    t.string "facebook"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_brands_on_user_id"
   end
 
   create_table "taproom_reviews", force: :cascade do |t|
@@ -64,6 +79,9 @@ ActiveRecord::Schema.define(version: 2022_11_20_160008) do
 
   create_table "taprooms", force: :cascade do |t|
     t.string "name", null: false
+    t.string "logo"
+    t.string "image_url"
+    t.string "description"
     t.string "address"
     t.string "city", null: false
     t.string "state", null: false
@@ -75,19 +93,18 @@ ActiveRecord::Schema.define(version: 2022_11_20_160008) do
     t.string "friday_hours"
     t.string "saturday_hours"
     t.string "sunday_hours"
-    t.string "description"
     t.string "dogs"
     t.string "kitchen"
     t.string "patio"
-    t.string "logo"
-    t.string "image_url"
+    t.string "official_webpage"
     t.string "instagram"
     t.string "twitter"
     t.string "facebook"
-    t.string "official_webpage"
     t.bigint "user_id", null: false
+    t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_taprooms_on_brand_id"
     t.index ["user_id"], name: "index_taprooms_on_user_id"
   end
 

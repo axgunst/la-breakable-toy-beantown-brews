@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :brands
   has_many :taprooms
   has_many :taproom_reviews
   has_many :beers
-  # has_many :beer_reviews
+  has_many :beer_reviews
 end

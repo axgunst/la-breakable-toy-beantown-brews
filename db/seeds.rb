@@ -38,6 +38,13 @@ user_4 = User.create(
   role: "member"
 )
 
+user_5 = User.create(
+  email: "user5@gmail.com",
+  password: "user5password",
+  username: "test_user5",
+  role: "member"
+)
+
 taproom_1 = Taproom.find_or_create_by(
   name: "LORD HOBO",
   address: "5 Draper St",
@@ -63,6 +70,8 @@ taproom_1 = Taproom.find_or_create_by(
   official_webpage: "https://lordhobo.com/",
   user: user_1
 )
+
+
 
 taproom_2 = Taproom.find_or_create_by(
   name: "NIGHT SHIFT BREWING",
