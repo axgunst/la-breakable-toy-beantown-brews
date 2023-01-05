@@ -5,7 +5,7 @@ class Taproom < ApplicationRecord
   validates :zipcode, presence: true
 
   has_many :taproom_reviews
-  has_many :beers
 
   belongs_to :user
+  belongs_to :brand
 end 
