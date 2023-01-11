@@ -10,10 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_05_165034) do
+ActiveRecord::Schema.define(version: 2023_01_11_013220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "beer_images", force: :cascade do |t|
+  end
 
   create_table "beer_reviews", force: :cascade do |t|
     t.string "title", null: false
@@ -44,6 +47,9 @@ ActiveRecord::Schema.define(version: 2023_01_05_165034) do
     t.index ["user_id"], name: "index_beers_on_user_id"
   end
 
+  create_table "brand_images", force: :cascade do |t|
+  end
+
   create_table "brands", force: :cascade do |t|
     t.string "name", null: false
     t.string "logo", null: false
@@ -59,6 +65,9 @@ ActiveRecord::Schema.define(version: 2023_01_05_165034) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_brands_on_user_id"
+  end
+
+  create_table "taproom_images", force: :cascade do |t|
   end
 
   create_table "taproom_reviews", force: :cascade do |t|
