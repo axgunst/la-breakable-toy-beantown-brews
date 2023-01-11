@@ -3,7 +3,7 @@ class CreateTaproomReviews < ActiveRecord::Migration[5.2]
     create_table :taproom_reviews do |t|
       t.string :title, null: false
       t.string :body, null: false
-      t.string :overall_rating
+      t.string :overall_rating, null: false
       t.string :service_rating
       t.string :ambience_rating
       t.string :group_accommodations_rating

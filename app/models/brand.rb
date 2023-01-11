@@ -7,5 +7,6 @@ class Brand < ApplicationRecord
   belongs_to :user
   has_many :taprooms
   has_many :beers
+  has_many :brand_images
  
 end

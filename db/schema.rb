@@ -16,6 +16,12 @@ ActiveRecord::Schema.define(version: 2023_01_11_013220) do
   enable_extension "plpgsql"
 
   create_table "beer_images", force: :cascade do |t|
+    t.string "image_url", null: false
+    t.string "caption"
+    t.bigint "beer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["beer_id"], name: "index_beer_images_on_beer_id"
   end
 
   create_table "beer_reviews", force: :cascade do |t|
@@ -48,6 +54,12 @@ ActiveRecord::Schema.define(version: 2023_01_11_013220) do
   end
 
   create_table "brand_images", force: :cascade do |t|
+    t.string "image_url", null: false
+    t.string "image"
+    t.bigint "brand_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_brand_images_on_brand_id"
   end
 
   create_table "brands", force: :cascade do |t|
@@ -68,12 +80,18 @@ ActiveRecord::Schema.define(version: 2023_01_11_013220) do
   end
 
   create_table "taproom_images", force: :cascade do |t|
+    t.string "image_url", null: false
+    t.string "caption"
+    t.bigint "taproom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["taproom_id"], name: "index_taproom_images_on_taproom_id"
   end
 
   create_table "taproom_reviews", force: :cascade do |t|
     t.string "title", null: false
     t.string "body", null: false
-    t.string "overall_rating"
+    t.string "overall_rating", null: false
     t.string "service_rating"
     t.string "ambience_rating"
     t.string "group_accommodations_rating"
