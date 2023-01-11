@@ -17,10 +17,9 @@ ActiveRecord::Schema.define(version: 2023_01_05_165034) do
 
   create_table "beer_reviews", force: :cascade do |t|
     t.string "title", null: false
-    t.string "name", null: false
+    t.string "body", null: false
     t.string "overall_rating", null: false
     t.string "pour"
-    t.string "body", null: false
     t.string "photo"
     t.bigint "user_id", null: false
     t.bigint "beer_id", null: false
@@ -32,28 +31,30 @@ ActiveRecord::Schema.define(version: 2023_01_05_165034) do
 
   create_table "beers", force: :cascade do |t|
     t.string "name", null: false
+    t.string "brand", null: false
+    t.string "image_url"
     t.string "description"
-    t.string "brewer", null: false
     t.string "style", null: false
     t.string "abv"
-    t.string "image_url"
     t.bigint "user_id", null: false
-    t.bigint "taproom_id", null: false
+    t.bigint "brand_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["taproom_id"], name: "index_beers_on_taproom_id"
+    t.index ["brand_id"], name: "index_beers_on_brand_id"
     t.index ["user_id"], name: "index_beers_on_user_id"
   end
 
   create_table "brands", force: :cascade do |t|
     t.string "name", null: false
     t.string "logo", null: false
-    t.string "description", null: false
     t.string "image_url"
+    t.string "description", null: false
     t.string "official_webpage"
     t.string "instagram"
     t.string "twitter"
     t.string "facebook"
+    t.string "tours"
+    t.string "tour_tickets"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -79,13 +80,16 @@ ActiveRecord::Schema.define(version: 2023_01_05_165034) do
 
   create_table "taprooms", force: :cascade do |t|
     t.string "name", null: false
-    t.string "logo"
+    t.string "brand", null: false
+    t.string "logo", null: false
     t.string "image_url"
     t.string "description"
     t.string "address"
     t.string "city", null: false
     t.string "state", null: false
     t.string "zipcode", null: false
+    t.string "directions"
+    t.string "parking"
     t.string "monday_hours"
     t.string "tuesday_hours"
     t.string "wednesday_hours"
@@ -93,13 +97,11 @@ ActiveRecord::Schema.define(version: 2023_01_05_165034) do
     t.string "friday_hours"
     t.string "saturday_hours"
     t.string "sunday_hours"
-    t.string "dogs"
+    t.string "reservations"
+    t.string "reservations_link"
     t.string "kitchen"
     t.string "patio"
-    t.string "official_webpage"
-    t.string "instagram"
-    t.string "twitter"
-    t.string "facebook"
+    t.string "dogs"
     t.bigint "user_id", null: false
     t.bigint "brand_id"
     t.datetime "created_at", null: false

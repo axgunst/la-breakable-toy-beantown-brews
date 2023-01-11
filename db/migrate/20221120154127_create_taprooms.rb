@@ -2,13 +2,16 @@ class CreateTaprooms < ActiveRecord::Migration[5.2]
   def change
     create_table :taprooms do |t|
       t.string :name, null: false
-      t.string :logo
+      t.string :brand, null: false
+      t.string :logo, null: false
       t.string :image_url
       t.string :description
       t.string :address
       t.string :city, null: false
       t.string :state, null: false
       t.string :zipcode, null: false
+      t.string :directions
+      t.string :parking
       t.string :monday_hours
       t.string :tuesday_hours
       t.string :wednesday_hours
@@ -16,13 +19,11 @@ class CreateTaprooms < ActiveRecord::Migration[5.2]
       t.string :friday_hours
       t.string :saturday_hours
       t.string :sunday_hours
-      t.string :dogs
+      t.string :reservations
+      t.string :reservations_link
       t.string :kitchen
       t.string :patio
-      t.string :official_webpage
-      t.string :instagram
-      t.string :twitter
-      t.string :facebook
+      t.string :dogs
     
       t.belongs_to :user, null: false
       t.belongs_to :brand
