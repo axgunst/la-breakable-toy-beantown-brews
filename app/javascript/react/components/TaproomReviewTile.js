@@ -90,7 +90,6 @@ const TaproomReviewTile = (props) => {
 
         console.log("Review was changed successfully!");
 
-        // debugger
         // before setting/updatign state with the updated review
         // look at all props.reviews
         // find and relace the review just editted with the new one
