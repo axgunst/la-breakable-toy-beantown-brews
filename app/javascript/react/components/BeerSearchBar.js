@@ -1,39 +1,38 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const BeerSearchBar = (props) => {
-  const [searchString, setSearchString] = useState("")
+  const [searchString, setSearchString] = useState("");
 
   const handleChange = (event) => {
-    const newSearchString = event.target.value
-    setSearchString(newSearchString)
-  }
+    const newSearchString = event.target.value;
+    setSearchString(newSearchString);
+  };
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const body = JSON.stringify({
-      search_string: searchString
-    })
+      search_string: searchString,
+    });
     try {
       const response = await fetch("/api/v1/taprooms/taproom_id/beers/search", {
         method: "POST",
         body: body,
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
-        }
-      })
-      
+          Accept: "application/json",
+        },
+      });
+
       if (!response.ok) {
-        const errorMessage = `${response.status} (${response.statusText})`
-        throw new Error(errorMessage)
+        const errorMessage = `${response.status} (${response.statusText})`;
+        throw new Error(errorMessage);
       }
-      const responseBody = await response.json()
-      // debugger
-      props.setBeers(responseBody)
+      const responseBody = await response.json();
+      props.setBeers(responseBody);
     } catch (error) {
-      console.error(`Error in Fetch: ${error.message}`)
+      console.error(`Error in Fetch: ${error.message}`);
     }
-  }
+  };
 
   return (
     <div className="small-12 medium-6 large-4">
