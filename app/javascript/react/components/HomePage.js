@@ -21,7 +21,7 @@ export const HomePage = (props) => {
         <p className="home-page-info-block small-12 medium-12 large-12">
           Beantown Brews connects local beer enthusiasts on the search for the
           perfect pour. With over 130 taprooms in the BayState, everyone is
-          bound to find their perfect pint!
+          bound to find their favorite pint!
         </p>
         <div className="home-page-images">
           <div className="grid-x">
