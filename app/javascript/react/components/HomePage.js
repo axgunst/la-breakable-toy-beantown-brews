@@ -13,7 +13,7 @@ export const HomePage = (props) => {
           className="home-page-link-to-taprooms cell small-12 medium-12 large-12"
           href="/taprooms"
         >
-          Checkout the taprooms!
+          Checkout the taprooms! please
         </a>
         <h4 className="home-page-subtitle small-12 medium-12 large-12">
           BOSTON BREWED & POURED
