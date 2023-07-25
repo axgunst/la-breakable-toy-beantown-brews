@@ -5,7 +5,7 @@ const TaproomTile = (props) => {
   return (
     <div className="cell medium-6 small-12 large-4">
       <Link to={`/taprooms/${props.id}`}>
-        <div className="taproom-index-box">
+        <div className="taproom-index-tile">
           <img src={props.logo} className="taproom-index-tile-logo" />
         </div>
       </Link>
