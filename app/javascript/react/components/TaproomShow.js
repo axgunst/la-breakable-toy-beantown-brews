@@ -38,7 +38,7 @@ const TaproomShow = (props) => {
         style={beer.style}
         abv={beer.abv}
         description={beer.description}
-        brewer={beer.brewer}
+        brand={beer.brand}
         image_url={beer.image_url}
       />
     );
@@ -65,6 +65,8 @@ const TaproomShow = (props) => {
               <h4>
                 {props.address}, {props.zipcode}
               </h4>
+              <h4>{props.directions}</h4>
+              <h4>{props.parking}</h4>
               <hr></hr>
             </div>
 
@@ -94,6 +96,11 @@ const TaproomShow = (props) => {
               </div>
             </div>
 
+            <div className="taproom-reservations">
+              <h3>{props.reservations}</h3>
+              <h3>{props.reservations_link}</h3>
+            </div>
+
             <div className="grid-x taproom-show-buttons">
               <div className="rounded-social-buttons cell small-12 medium-6 large-6">
                 <a
@@ -107,7 +114,7 @@ const TaproomShow = (props) => {
                   />
                 </a>
                 <a
-                  className="social-button cell small-12 medium-6 large-6"
+                  className="social-button twitter cell small-12 medium-6 large-6"
                   href={props.twitter}
                   target="_blank"
                 >
@@ -150,9 +157,15 @@ const TaproomShow = (props) => {
 
           <div className="taproom-faq cell small-12 medium-6 large-6">
             <h3 className="taproom-faq-title">FAQ</h3>
-            <h5>ARE DOGS ALLOWED AT OUR TAPROOM?</h5>
             <h5>DO WE HAVE FOOD AVAILABLE?</h5>
             <h5>DO WE HAVE OUTDOOR SEATING?</h5>
+            <h5>ARE DOGS ALLOWED AT OUR TAPROOM?</h5>
+          </div>
+
+          <div className="taproom-faq-answers small-12 medium-6 large-6">
+            <h6>{props.kitchen}</h6>
+            <h6>{props.patio}</h6>
+            <h6>{props.dogs}</h6>
           </div>
         </div>
       </div>
