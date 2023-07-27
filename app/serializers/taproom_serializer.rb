@@ -25,4 +25,5 @@ class TaproomSerializer < ActiveModel::Serializer
   :current_user
   
   belongs_to :user
+  belongs_to :brand
 end
