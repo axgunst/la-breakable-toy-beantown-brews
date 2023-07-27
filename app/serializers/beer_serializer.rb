@@ -8,5 +8,5 @@ class BeerSerializer < ActiveModel::Serializer
   :current_user
   
   belongs_to :user
-  belongs_to :taproom
+  belongs_to :brand
 end

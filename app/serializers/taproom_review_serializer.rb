@@ -23,5 +23,6 @@ class TaproomReviewSerializer < ActiveModel::Serializer
   end 
 
   belongs_to :user 
+  belongs_to :taproom
   
 end

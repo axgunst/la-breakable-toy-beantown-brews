@@ -12,6 +12,7 @@ class BeerReviewSerializer < ActiveModel::Serializer
     object.created_at.strftime("%b %d %Y")
   end
 
-  belongs_to :user 
+  belongs_to :user
+  belong_to :beer
   
 end
