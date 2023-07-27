@@ -116,6 +116,8 @@ const BrandShowContainer = (props) => {
       twitter={brand.twitter}
       facebook={brand.facebook}
       official_webpage={brand.official_webpage}
+      tours={brand.tours}
+      tour_tickets={brand.tour_tickets}
       beers={beers}
       taprooms={taprooms}
     />
