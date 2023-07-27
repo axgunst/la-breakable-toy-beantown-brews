@@ -34,7 +34,7 @@ const BeerIndexContainer = (props) => {
         style={beer.style}
         abv={beer.abv}
         description={beer.description}
-        brewer={beer.brewer}
+        brand={beer.brand}
         image_url={beer.image_url}
       />
     );
