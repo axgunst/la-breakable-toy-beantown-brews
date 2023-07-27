@@ -7,7 +7,7 @@ const TaproomIndexContainer = (props) => {
 
   const getTaprooms = async () => {
     try {
-      const response = await fetch("/api/v1/taprooms");
+      const response = await fetch(`/api/v1/brands/${brand.Id}/taprooms`);
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`;
         throw new Error(errorMessage);
