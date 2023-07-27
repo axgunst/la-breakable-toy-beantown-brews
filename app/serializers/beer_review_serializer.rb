@@ -12,6 +12,14 @@ class BeerReviewSerializer < ActiveModel::Serializer
     object.created_at.strftime("%b %d %Y")
   end
 
+  def photo
+    if object.photo.blank?
+      return nil
+    else 
+      return object.photo.url
+    end
+  end 
+
   belongs_to :user
   belong_to :beer
   
