@@ -4,7 +4,7 @@ class Api::V1::BeerReviewsController < ApiController
   
 
   def create
-    taproom = Beer.find(params[:taproom_id])
+    taproom = Beer.find(params[:brand_id])
     review = BeerReview.new(review_params)
 
     review.beer = beer
