@@ -4,7 +4,7 @@ class Api::V1::TaproomReviewsController < ApiController
   
   def create
     # binding.pry
-    taproom = Taproom.find(params[:taproom_id])
+    taproom = Taproom.find(params[:band_id])
     review = TaproomReview.new(review_params)
 
     review.taproom = taproom
