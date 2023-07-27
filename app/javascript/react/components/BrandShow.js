@@ -158,7 +158,7 @@ const BrandShow = (props) => {
         </div>
       </div>
 
-      <div className="taproom-show-beer-index">
+      <div className="brand-show-beer-index">
         {/* <div className="grid-x"> */}
         <div className="small-12 medium-6 large-4">
           <div className="taproom-show-beer-logo grid-x">{beerTiles}</div>
@@ -173,7 +173,7 @@ const BrandShow = (props) => {
           taproomId = {taproomId}
         />
       </div> */}
-      <div className="taproom-show-taproom-index">
+      <div className="brand-show-taproom-index">
         {/* <div className="grid-x"> */}
         <div className="small-12 medium-6 large-4">
           <div className="brand-show-taproom-logo grid-x">{taproomTiles}</div>
