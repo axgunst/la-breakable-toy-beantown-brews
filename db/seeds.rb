@@ -58,8 +58,8 @@ lord_hobo = Brand.find_or_create_by(
   official_webpage: "https://lordhobo.com/",
   instagram: "https://www.instagram.com/lordhobobrewing/?hl=en",
   twitter: "https://twitter.com/lordhobobrewing?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
-  facebook: "https://www.facebook.com/lordhobobrewing/"
-  tours: "We do not offer tours at the moment. However, our Woburn taproom is designed with an open-air architectural concept which allows you to view parts of the brewery through our garage door. Also, our team is always on hand to discuss our background and what we're currently up to. Just ask on your next visit!"
+  facebook: "https://www.facebook.com/lordhobobrewing/",
+  tours: "We do not offer tours at the moment. However, our Woburn taproom is designed with an open-air architectural concept which allows you to view parts of the brewery through our garage door. Also, our team is always on hand to discuss our background and what we're currently up to. Just ask on your next visit!",
   user: user_admin
 )
 
@@ -130,15 +130,15 @@ sam_adams = Brand.find_or_create_by(
 )
 
 harpoon = Brand.find_or_create_by(
-  name: "Harpoon"
+  name: "Harpoon",
   logo: "https://beantown-brews-production.s3.amazonaws.com/harpoon/harpoon-logo.png",
   image_url: "https://beantown-brews-production.s3.amazonaws.com/harpoon/boston-taproom/harpoon-boston-taproom-inside.jpeg",
-  description: "It all started with three college buddies and a shared love of beer. In 1986 the Harpoon Brewery received Brewing Permit #001 in the Commonwealth of Massachusetts. And that, friends, was the beginning of Harpoon…. Finally, in June of 1987 the “original” Harpoon Ale was brewed and delivered to Harpoon’s first accounts; the Sevens Ale House on Charles Street and Doyle's Café in Jamaica Plain. And the rest, as they say, is history. Sure, many things have changed since the early days of Harpoon, but much has stayed the same. We still love brewing beer and enjoying it with friends!"","
+  description: "It all started with three college buddies and a shared love of beer. In 1986 the Harpoon Brewery received Brewing Permit #001 in the Commonwealth of Massachusetts. And that, friends, was the beginning of Harpoon…. Finally, in June of 1987 the “original” Harpoon Ale was brewed and delivered to Harpoon’s first accounts; the Sevens Ale House on Charles Street and Doyle's Café in Jamaica Plain. And the rest, as they say, is history. Sure, many things have changed since the early days of Harpoon, but much has stayed the same. We still love brewing beer and enjoying it with friends!",
   official_webpage: "https://www.harpoonbrewery.com/",
   instagram: "https://www.instagram.com/harpoonbrewery/",
   twitter: "https://twitter.com/harpoonbrewery",
   facebook: "https://www.facebook.com/TheHarpoonBrewery",
-  tours: "We offer daily 30-minute Guided Tastings for $5 per person which includes a walk through of our brewery over to our original tasting room where you will learn about our brands and sample our core offerings! You will be able to pre-purchase tour tickets online or in person first come, first served day-of only. Tours are 21+ unless accompanied by a parent or guardian,"
+  tours: "We offer daily 30-minute Guided Tastings for $5 per person which includes a walk through of our brewery over to our original tasting room where you will learn about our brands and sample our core offerings! You will be able to pre-purchase tour tickets online or in person first come, first served day-of only. Tours are 21+ unless accompanied by a parent or guardian,",
   tour_tickets: "https://www.toasttab.com/harpoon-beer-hall-boston/v3",
   user: user_admin
 )
