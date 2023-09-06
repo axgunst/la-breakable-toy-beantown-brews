@@ -35,6 +35,14 @@ class Api::V1::BeerReviewsController < ApiController
   private
 
   def review_params
-    params.permit(:title, :name, :overall_rating, :pour, :description, :photo)
+    params.permit
+    (
+      :title, 
+      :name, 
+      :overall_rating, 
+      :pour, 
+      :description, 
+      :photo
+    )
   end 
 end

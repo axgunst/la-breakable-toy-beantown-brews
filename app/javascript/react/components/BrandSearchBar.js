@@ -37,14 +37,14 @@ const BrandSearchBar = (props) => {
   return (
     <div className="small-12 medium-6 large-4">
       <form onSubmit={handleSubmit}>
-        <div className="input-group input-group-rounded taproom-search-bar">
+        <div className="input-group input-group-rounded brand-search-bar">
           <input
-            className="taproom-search"
+            className="brand-search"
             type="search"
             name="searchString"
             value={searchString}
             onChange={handleChange}
-            placeholder="Search taprooms"
+            placeholder="Search brands"
           />
           <div>
             <input type="submit" className="button" value="Search" />

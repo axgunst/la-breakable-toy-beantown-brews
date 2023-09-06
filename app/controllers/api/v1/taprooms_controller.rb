@@ -46,7 +46,7 @@ class Api::V1::TaproomsController < ApiController
       :instagram, 
       :twitter, 
       :facebook, 
-      :official_webpage,
+      :official_webpage
     )
   end
 end

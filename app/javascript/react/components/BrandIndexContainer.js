@@ -52,7 +52,7 @@ const BrandIndexContainer = (props) => {
       <div className="search-bar">
         <BrandSearchBar brands={brands} setBrands={setBrands} />
       </div>
-      <div className="grid-x grid-margin-x">{brandTiles}</div>
+      <div className="grid-x grid-margin-x">{brandTiles.logo}</div>
     </div>
   );
 };
