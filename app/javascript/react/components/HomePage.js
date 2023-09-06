@@ -11,7 +11,7 @@ export const HomePage = (props) => {
         />
         <a
           className="home-page-link-to-taprooms cell small-12 medium-12 large-12"
-          href="/taprooms"
+          href="/brands"
         >
           Checkout the taprooms!
         </a>
