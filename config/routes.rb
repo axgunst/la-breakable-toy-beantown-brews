@@ -17,16 +17,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :brands, only: [:index, :show, :create, :update, :destroy] do
-        resources :beers, only: [:index, :show, :create] do 
-          resources :beer_reviews, only: [:create, :update, :destroy],
-            resources :taprooms, only: [:index, :show, :create] do
-              resources :taproom_reviews, only: [:create, :update, :destroy]
-      end
+      resources :taprooms, only: [:index, :show, :create] do
+        resources :taproom_reviews, only: [:create, :update, :destroy]
+        resources :beers, only: [:index, :show, :create] do
+          resources :beer_reviews, only: [:create, :update, :destroy]
+        end
+      end 
+      post "/taprooms/search", to: "taprooms#search"
     end
-      post "/brands/search", to: "brands#search"
-    end
-  
-end
-end
+  end
 end
