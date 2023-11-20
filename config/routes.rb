@@ -23,7 +23,7 @@ Rails.application.routes.draw do
         resources :beers, only: [:index, :show, :create] do
           resources :beer_reviews, only: [:create, :update, :destroy]
         end
-      end 
+      end
       post "/taprooms/search", to: "taprooms#search"
     end
   end
