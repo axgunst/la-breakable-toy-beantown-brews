@@ -1,7 +1,7 @@
 class Brand < ApplicationRecord
-  validates :name, presence: true 
-  validates :logo, presence: true
-  validates :description, presence: true
+  validates :brand_name, presence: true 
+  validates :brand_logo, presence: true
+  validates :brand_description, presence: true
 
   
   belongs_to :user

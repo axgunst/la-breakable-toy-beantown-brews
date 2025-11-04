@@ -1,13 +1,13 @@
 class TaproomReviewSerializer < ActiveModel::Serializer
   attributes :id, 
-  :title, 
-  :body, 
-  :overall_rating, 
-  :service_rating,
-  :ambience_rating, 
-  :group_accommodations_rating,
-  :favorite_beer, 
-  :photo,
+  :taproom_review_title, 
+  :taproom_review_body, 
+  :taproom_review_overall_rating, 
+  :taproom_review_service_rating,
+  :taproom_review_ambience_rating, 
+  :taproom_review_group_accommodations_rating,
+  :taproom_review_favorite_beer, 
+  :taproom_review_image,
   :created_at
 
   def created_at

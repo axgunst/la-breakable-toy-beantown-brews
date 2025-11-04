@@ -1,29 +1,29 @@
 class CreateTaprooms < ActiveRecord::Migration[5.2]
   def change
     create_table :taprooms do |t|
-      t.string :name, null: false
-      t.string :brand, null: false
-      t.string :logo, null: false
-      t.string :image_url
-      t.string :description
-      t.string :address
-      t.string :city, null: false
-      t.string :state, null: false
-      t.string :zipcode, null: false
-      t.string :directions
-      t.string :parking
-      t.string :monday_hours
-      t.string :tuesday_hours
-      t.string :wednesday_hours
-      t.string :thursday_hours
-      t.string :friday_hours
-      t.string :saturday_hours
-      t.string :sunday_hours
-      t.string :reservations
-      t.string :reservations_link
-      t.string :kitchen
-      t.string :patio
-      t.string :dogs
+      t.string :taproom_name, null: false
+      t.string :taproom_brand, null: false
+      t.string :taproom_logo, null: false
+      t.string :taproom_image_url
+      t.string :taproom_description
+      t.string :taproom_address
+      t.string :taproom_city, null: false
+      t.string :taproom_state, null: false
+      t.string :taproom_zipcode, null: false
+      t.string :taproom_directions
+      t.string :taproom_parking
+      t.string :taproom_monday_hours
+      t.string :taproom_tuesday_hours
+      t.string :taproom_wednesday_hours
+      t.string :taproom_thursday_hours
+      t.string :taproom_friday_hours
+      t.string :taproom_saturday_hours
+      t.string :taproom_sunday_hours
+      t.string :taproom_reservations
+      t.string :taproom_reservations_link
+      t.string :taproom_kitchen
+      t.string :taproom_patio
+      t.string :taproom_dog_policy
     
       t.belongs_to :user, null: false
       t.belongs_to :brand

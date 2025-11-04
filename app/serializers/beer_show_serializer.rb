@@ -1,11 +1,11 @@
 class BeerShowSerializer < ActiveModel::Serializer
   attributes :id,
-    :name, 
-    :style, 
-    :abv, 
-    :description, 
-    :brewer, 
-    :image_url,
+    :beer_name, 
+    :beer_style, 
+    :beer_abv, 
+    :beer_description, 
+    :beer_brewer, 
+    :beer_image_url,
     :current_user
 
   has_many :beer_reviews
