@@ -7,4 +7,7 @@ class BeerReview < ApplicationRecord
   belongs_to :user
   belongs_to :beer
 
+  # mount_uploader :photo, TaproomReviewImageUploader
+  mount_uploader :beer_image, BeerReviewImageUploader
+
 end

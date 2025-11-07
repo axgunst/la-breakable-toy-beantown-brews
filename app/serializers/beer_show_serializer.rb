@@ -9,6 +9,7 @@ class BeerShowSerializer < ActiveModel::Serializer
     :current_user
 
   has_many :beer_reviews
+  has_many :beer_images
 
   def reviews
     object.reviews.reverse()

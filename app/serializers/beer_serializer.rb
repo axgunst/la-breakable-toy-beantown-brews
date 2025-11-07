@@ -10,4 +10,7 @@ class BeerSerializer < ActiveModel::Serializer
   belongs_to :user
   belongs_to :brand
 
+  has_many :beer_reviews
+  has_many :beer_images
+
 end
