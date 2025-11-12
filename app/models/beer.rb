@@ -1,7 +1,7 @@
 class Beer < ApplicationRecord
-  validates :name, presence: true 
-  validates :style, presence: true
-  validates :brewer, presence: true
+  validates :beer_name, presence: true 
+  validates :beer_style, presence: true
+  validates :beer_brewer, presence: true
 
   has_many :beer_reviews
   has_many :beer_images

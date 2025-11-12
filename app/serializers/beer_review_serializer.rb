@@ -1,11 +1,11 @@
 class BeerReviewSerializer < ActiveModel::Serializer
   attributes :id, 
-  :title, 
-  :name, 
-  :overall_rating,
-  :pour,
-  :body,
-  :photo,
+  :beer_review_title, 
+  :beer_review_name, 
+  :beer_review_body,
+  :beer_review_overall_rating,
+  :beer_review_pour,
+  :beer_review_image,
   :created_at
 
   def created_at
@@ -13,7 +13,7 @@ class BeerReviewSerializer < ActiveModel::Serializer
   end
 
   def photo
-    if object.photo.blank?
+    # if object.photo.blank?
       return nil
     else 
       return object.photo.url

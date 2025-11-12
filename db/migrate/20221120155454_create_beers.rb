@@ -1,12 +1,12 @@
 class CreateBeers < ActiveRecord::Migration[5.2]
   def change
     create_table :beers do |t|
-      t.string :name, null: false
-      t.string :brand, null: false
-      t.string :image_url
-      t.string :description
-      t.string :style, null: false
-      t.string :abv
+      t.string :beer_name, null: false
+      t.string :beer_brand, null: false
+      t.string :beer_image_url
+      t.string :beer_description
+      t.string :beer_style, null: false
+      t.string :beer_abv
     
 
       t.belongs_to :user, null: false

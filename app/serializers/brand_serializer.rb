@@ -1,16 +1,15 @@
 class BrandSerializer < ActiveModel::Serializer
   attributes :id, 
-  :name, 
-  :logo, 
-  :image_url, 
-  :description;
-  :official_webpage,
-  :instagram, 
-  :twitter, 
-  :facebook, 
-  :tours,
-  :tour_tickets
-  
+  :brand_name, 
+  :brand_logo, 
+  :brand_image_url, 
+  :brand_description;
+  :brand_official_webpage,
+  :brand_instagram, 
+  :brand_twitter, 
+  :brand_facebook, 
+  :brand_tours,
+  :brand_tour_tickets,
   :current_user
   
   belongs_to :user

@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_215242) do
   enable_extension "plpgsql"
 
   create_table "beer_images", force: :cascade do |t|
-    t.string "image_url", null: false
-    t.string "caption"
+    t.string "beer_image_url", null: false
+    t.string "beer_image_caption"
     t.bigint "beer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 2023_01_14_215242) do
   end
 
   create_table "beer_reviews", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "body", null: false
-    t.string "overall_rating", null: false
-    t.string "pour"
-    t.string "photo"
+    t.string "beer_review_title", null: false
+    t.string "beer_review_body", null: false
+    t.string "beer_review_overall_rating", null: false
+    t.string "beer_review_pour"
+    t.string "beer_review_image"
     t.bigint "user_id", null: false
     t.bigint "beer_id", null: false
     t.datetime "created_at", null: false
@@ -39,17 +39,17 @@ ActiveRecord::Schema.define(version: 2023_01_14_215242) do
   end
 
   create_table "beer_styles", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "description", null: false
+    t.string "beer_style_name", null: false
+    t.string "beer_style_description", null: false
   end
 
   create_table "beers", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "brand", null: false
-    t.string "image_url"
-    t.string "description"
-    t.string "style", null: false
-    t.string "abv"
+    t.string "beer_name", null: false
+    t.string "beer_brand", null: false
+    t.string "beer_image_url"
+    t.string "beer_description"
+    t.string "beer_style", null: false
+    t.string "beer_abv"
     t.bigint "user_id", null: false
     t.bigint "brand_id", null: false
     t.datetime "created_at", null: false
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_215242) do
   end
 
   create_table "brand_images", force: :cascade do |t|
-    t.string "image_url", null: false
-    t.string "image"
+    t.string "brand_image_url", null: false
+    t.string "brand_image_caption"
     t.bigint "brand_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -68,16 +68,16 @@ ActiveRecord::Schema.define(version: 2023_01_14_215242) do
   end
 
   create_table "brands", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "logo", null: false
-    t.string "image_url"
-    t.string "description", null: false
-    t.string "official_webpage"
-    t.string "instagram"
-    t.string "twitter"
-    t.string "facebook"
-    t.string "tours"
-    t.string "tour_tickets"
+    t.string "brand_name", null: false
+    t.string "brand_logo", null: false
+    t.string "brand_image_url"
+    t.string "brand_description", null: false
+    t.string "brand_official_webpage"
+    t.string "brand_instagram"
+    t.string "brand_twitter"
+    t.string "brand_facebook"
+    t.string "brand_tours"
+    t.string "brand_tour_tickets"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -85,8 +85,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_215242) do
   end
 
   create_table "taproom_images", force: :cascade do |t|
-    t.string "image_url", null: false
-    t.string "caption"
+    t.string "taproom_image_url", null: false
+    t.string "taproom_image_caption"
     t.bigint "taproom_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -94,14 +94,14 @@ ActiveRecord::Schema.define(version: 2023_01_14_215242) do
   end
 
   create_table "taproom_reviews", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "body", null: false
-    t.string "overall_rating", null: false
-    t.string "service_rating"
-    t.string "ambience_rating"
-    t.string "group_accommodations_rating"
-    t.string "favorite_beer"
-    t.string "photo"
+    t.string "taproom_review_title", null: false
+    t.string "taproom_review_body", null: false
+    t.string "taproom_review_overall_rating", null: false
+    t.string "taproom_review_service_rating"
+    t.string "taproom_review_ambience_rating"
+    t.string "taproom_review_group_accommodations_rating"
+    t.string "taproom_review_favorite_beer"
+    t.string "taproom_review_image"
     t.bigint "user_id", null: false
     t.bigint "taproom_id", null: false
     t.datetime "created_at", null: false
@@ -111,29 +111,29 @@ ActiveRecord::Schema.define(version: 2023_01_14_215242) do
   end
 
   create_table "taprooms", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "brand", null: false
-    t.string "logo", null: false
-    t.string "image_url"
-    t.string "description"
-    t.string "address"
-    t.string "city", null: false
-    t.string "state", null: false
-    t.string "zipcode", null: false
-    t.string "directions"
-    t.string "parking"
-    t.string "monday_hours"
-    t.string "tuesday_hours"
-    t.string "wednesday_hours"
-    t.string "thursday_hours"
-    t.string "friday_hours"
-    t.string "saturday_hours"
-    t.string "sunday_hours"
-    t.string "reservations"
-    t.string "reservations_link"
-    t.string "kitchen"
-    t.string "patio"
-    t.string "dogs"
+    t.string "taproom_name", null: false
+    t.string "taproom_brand", null: false
+    t.string "taproom_logo", null: false
+    t.string "taproom_image_url"
+    t.string "taproom_description"
+    t.string "taproom_address"
+    t.string "taproom_city", null: false
+    t.string "taproom_state", null: false
+    t.string "taproom_zipcode", null: false
+    t.string "taproom_directions"
+    t.string "taproom_parking"
+    t.string "taproom_monday_hours"
+    t.string "taproom_tuesday_hours"
+    t.string "taproom_wednesday_hours"
+    t.string "taproom_thursday_hours"
+    t.string "taproom_friday_hours"
+    t.string "taproom_saturday_hours"
+    t.string "taproom_sunday_hours"
+    t.string "taproom_reservations"
+    t.string "taproom_reservations_link"
+    t.string "taproom_kitchen"
+    t.string "taproom_patio"
+    t.string "taproom_dog_policy"
     t.bigint "user_id", null: false
     t.bigint "brand_id"
     t.datetime "created_at", null: false
