@@ -29,7 +29,7 @@ const BrandShow = (props) => {
   //     />
   //   );
   // });
-  const taproomTiles = props.taprooms.map((beer) => {
+  const taproomTiles = props.taprooms.map((taproom) => {
     return (
       <TaproomTile
         key={taproomId}
