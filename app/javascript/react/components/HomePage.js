@@ -7,34 +7,33 @@ export const HomePage = (props) => {
       <div className="grid-x">
         <img
           className="home-page-top-image small-12 medium-12 large-12"
-          src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/sam-adams/sam-adams-tap-handles.jpeg"
+          //src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/sam-adams/sam-adams-tap-handles.jpeg"
+          src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/Homepage+photo.jpg"
         />
         <a
           className="home-page-link-to-taprooms cell small-12 medium-12 large-12"
           href="/brands"
         >
-          Checkout the taprooms!
+          Checkout the taprooms in Boston!
         </a>
         <h4 className="home-page-subtitle small-12 medium-12 large-12">
           BOSTON BREWED & POURED
         </h4>
         <p className="home-page-info-block small-12 medium-12 large-12">
-          Beantown Brews connects local beer enthusiasts searching for the
-          perfect pour. With over 130 taprooms in the BayState, everyone is
-          bound to find their favorite pint!
+          TEXT HERE
         </p>
         <div className="home-page-images">
           <div className="grid-x">
             <img
-              src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/mighty-squirrel-brewing-co/beer-labels/mighty-squirrel-cosmic-distortion-can.png"
+              src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/lord-hobo/beer-images/lord-hob-617-hazy-ipa-can-3.jpeg"
               className="small-12 medium-4 large-4"
             />
             <img
-              src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/mighty-squirrel-brewing-co/beer-labels/might-squirrel-cloud-candy-can.jpeg"
+              src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/lord-hobo/beer-labels/lord-hobo-juice-lord-can.jpeg"
               className="small-12 medium-4 large-4"
             />
             <img
-              src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/mighty-squirrel-brewing-co/beer-labels/mighty-squirrel-razzle-dazzle-smoovy-can.jpeg"
+              src="https://beantown-brews-production.s3.us-east-1.amazonaws.com/lord-hobo/beer-labels/lord-hobo-617-lager-can.jpeg"
               className="small-12 medium-4 large-4"
             />
           </div>
